@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
 
                     // Set result for overlay
                     $('.ielts-reading-result-info').append($('.ielts-reading-band-score').clone());
-                    $('.ielts-reading-result-info').append('<h3>'+ response.data.correct_answer_count + '/' + results.length + '</h3>');
+                    $('.ielts-reading-result-info').append('<h3>'+ response.data.correct_answer_count + '/engovate.github.io/' + results.length + '</h3>');
                     $('.ielts-reading-result-info').append($('.ielts-reading-timer').clone());
 
                     // Get transcript elements to show explanations on
@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
                         // Brackets
                         "(", ")", "[", "]", "{", "}",
                         // Misc
-                        "_", "+", "=", "/", "\\", "*", " ", "$", "^", "|",
+                        "_", "+", "=", "/engovate.github.io/", "\\", "*", " ", "$", "^", "|",
                         // Whitespace
                         "\n", "\r", "\t", "\u00A0", "\u200B", "\u200C", "\u200D", "\u2028", "\u2029"
                     ];

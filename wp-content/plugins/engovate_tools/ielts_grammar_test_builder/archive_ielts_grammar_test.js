@@ -6,11 +6,11 @@ jQuery(document).ready(function($) {
 
         var categorySlug = $(this).data('categorySlug');
         var pathname = window.location.pathname;
-        if (!pathname.endsWith('/')) {
-            pathname += '/';
+        if (!pathname.endsWith('/engovate.github.io/')) {
+            pathname += '/engovate.github.io/';
         }
 
-        var newUrl = window.location.protocol + '//' + window.location.host + pathname;
+        var newUrl = window.location.protocol + '/engovate.github.io//' + window.location.host + pathname;
         if (categorySlug) {
             newUrl += '?category=' + encodeURIComponent(categorySlug);
         }
@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
         var paginationContainer = $(this).closest('.pagination');
         var tagSlug = paginationContainer.data('tagSlug');
         var tagPostsContainer = $('#tag-posts-' + tagSlug);
-        var urlSegments = $(this).attr('href').split('/');
+        var urlSegments = $(this).attr('href').split('/engovate.github.io/');
         var paged = urlSegments[urlSegments.length - 1];
 
         var categorySlug = '';

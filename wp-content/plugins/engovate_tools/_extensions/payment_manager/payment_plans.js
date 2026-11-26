@@ -10,7 +10,7 @@ jQuery(document).ready(function ($) {
         e.preventDefault();
         var plan = $(this).data('plan');
         $('.go-to-checkout-page-button')
-            .attr('href', '/payment-checkout/?plan=' + plan)
+            .attr('href', '/engovate.github.io/payment-checkout/?plan=' + plan)
             .text(getPlanLabel(plan));
     });
 });

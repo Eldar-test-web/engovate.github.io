@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
                 var locked = false;
                 if (locked) {
                     a.className = 'locked';
-                    a.href = '/payment-plans/';
+                    a.href = '/engovate.github.io/payment-plans/';
                 } else {
                     a.href = base + '&src_test=' + testId + '&section=' + p.section;
                     a.target = '_blank'; a.rel = 'noopener';

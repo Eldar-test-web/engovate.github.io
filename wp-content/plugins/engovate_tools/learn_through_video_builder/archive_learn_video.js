@@ -27,7 +27,7 @@ jQuery(document).ready(function($) {
         var categorySlug = paginationContainer.data('categorySlug');
         var categoryPostsContainer = $('#category-posts-' + categorySlug);
         var url = $(this).attr('href');
-        var urlSegments = url.split('/');
+        var urlSegments = url.split('/engovate.github.io/');
         var paged = urlSegments[urlSegments.length - 1];
 
         var searchTerms = "";

@@ -599,7 +599,7 @@ jQuery(document).ready(function ($) {
                 $("#caption-" + captionIndex).addClass("incorrect-dictation");
             }
 
-            $(".correct-dictation-number span").html(captionDictationStates.filter(value => value.status).length + "/" + captions.length);
+            $(".correct-dictation-number span").html(captionDictationStates.filter(value => value.status).length + "/engovate.github.io/" + captions.length);
         }
     }
 

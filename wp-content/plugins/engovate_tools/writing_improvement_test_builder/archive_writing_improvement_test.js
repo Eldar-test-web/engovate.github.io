@@ -11,13 +11,13 @@ jQuery(document).ready(function($) {
         var pathname = window.location.pathname;
         
         // Check if the pathname ends with a slash
-        if (!pathname.endsWith('/')) {
+        if (!pathname.endsWith('/engovate.github.io/')) {
             // Add the slash
-            pathname += '/';
+            pathname += '/engovate.github.io/';
         }
         
         // Construct the new URL
-        var newUrl = protocol + '//' + host + pathname;
+        var newUrl = protocol + '/engovate.github.io//' + host + pathname;
         if(categorySlug) {
             newUrl += '?category=' + encodeURIComponent(categorySlug);
         }
@@ -53,7 +53,7 @@ jQuery(document).ready(function($) {
         var tagSlug = paginationContainer.data('tagSlug');
         var tagPostsContainer = $('#tag-posts-' + tagSlug);
         var url = $(this).attr('href');
-        var urlSegments = url.split('/');
+        var urlSegments = url.split('/engovate.github.io/');
         var paged = urlSegments[urlSegments.length - 1];
 
         var categorySlug = "";
@@ -151,11 +151,11 @@ jQuery(document).ready(function($) {
         var host = window.location.host;
         var pathname = window.location.pathname;
 
-        if (!pathname.endsWith('/')) {
-            pathname += '/';
+        if (!pathname.endsWith('/engovate.github.io/')) {
+            pathname += '/engovate.github.io/';
         }
 
-        var newUrl = protocol + '//' + host + pathname + 'custom?topic=' + encodeURIComponent(customTopic);
+        var newUrl = protocol + '/engovate.github.io//' + host + pathname + 'custom?topic=' + encodeURIComponent(customTopic);
         window.location.href = newUrl;
     });
 

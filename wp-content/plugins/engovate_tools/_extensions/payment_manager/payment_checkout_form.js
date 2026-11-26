@@ -76,7 +76,7 @@ jQuery(document).ready(function ($) {
       return actions.order.capture().then(function (details) {
         var orderNumber = data.orderID;
         //the success page verifies the order with PayPal and mints the code, the same way the other providers work
-        window.location.href = '/payment-success/?payment_type=paypal&order_number=' + encodeURIComponent(orderNumber);
+        window.location.href = '/engovate.github.io/payment-success/?payment_type=paypal&order_number=' + encodeURIComponent(orderNumber);
       }).catch(function (error) {
         alert("The payment could not be processed. Please check your funding source or try a different payment method.");
         console.error('Capture error', error);
@@ -96,14 +96,14 @@ jQuery(document).ready(function ($) {
       productId = dodoPaymentsProducts[plan];
     }
 
-    var checkoutUrl = $(this).data('checkout-url') + '/buy/' + productId;
+    var checkoutUrl = $(this).data('checkout-url') + '/engovate.github.io/buy/' + productId;
 
     //Dodo sends the buyer back with payment_id, status and email appended to the redirect_url,
     //and hands the plan back to us on the payment itself through the metadata_ prefixed parameter.
     checkoutUrl += '?quantity=1';
     checkoutUrl += '&showDiscounts=false'; //hide the coupon/promo code box, our prices are already discounted
     checkoutUrl += '&metadata_plan=' + encodeURIComponent(plan);
-    checkoutUrl += '&redirect_url=' + encodeURIComponent(window.location.origin + '/payment-success/?payment_type=dodopayments');
+    checkoutUrl += '&redirect_url=' + encodeURIComponent(window.location.origin + '/engovate.github.io/payment-success/?payment_type=dodopayments');
 
     window.location.href = checkoutUrl;
   });
@@ -114,7 +114,7 @@ jQuery(document).ready(function ($) {
 
     params.set(paramName, paramValue);
 
-    var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + params.toString();
+    var newUrl = window.location.protocol + "/engovate.github.io//" + window.location.host + window.location.pathname + '?' + params.toString();
     window.history.pushState({ path: newUrl }, '', newUrl);
   }
 });

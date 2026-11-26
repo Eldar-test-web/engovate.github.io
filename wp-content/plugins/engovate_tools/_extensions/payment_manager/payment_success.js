@@ -290,7 +290,7 @@ jQuery(document).ready(function ($) {
         }
     }
     else {
-        $('.payment-confirmation-form').html('<a href="/payment-checkout/">Please check out first!</a>');
+        $('.payment-confirmation-form').html('<a href="/engovate.github.io/payment-checkout/">Please check out first!</a>');
         $('.payment-confirmation-form').css('display', 'flex');
         $('.spinner-wrapper').hide();
     }
@@ -325,7 +325,7 @@ jQuery(document).ready(function ($) {
         paymentConfirmationForm.find('.payment-confirm-order-id').text(orderNumber);
         paymentConfirmationForm.find('.payment-confirm-user-email').text(userEmail);
         paymentConfirmationForm.find('.payment-confirm-activation-code').text(activationCode);
-        paymentConfirmationForm.find('.go-to-profile-button').attr('href', '/learner-profile/?activation_code=' + encodeURIComponent(activationCode));
+        paymentConfirmationForm.find('.go-to-profile-button').attr('href', '/engovate.github.io/learner-profile/?activation_code=' + encodeURIComponent(activationCode));
         paymentConfirmationForm.css('display', 'flex');
         $('.spinner-wrapper').hide();
     }

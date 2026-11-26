@@ -113,7 +113,7 @@ jQuery(document).ready(function($) {
 
                     // Set result for overlay
                     $('.ielts-listening-result-info').append($('.ielts-listening-band-score').clone());
-                    $('.ielts-listening-result-info').append('<h3>'+ response.data.correct_answer_count + '/' + results.length + '</h3>');
+                    $('.ielts-listening-result-info').append('<h3>'+ response.data.correct_answer_count + '/engovate.github.io/' + results.length + '</h3>');
                     $('.ielts-listening-result-info').append($('.ielts-listening-timer').clone());
 
                     // Get transcript elements to show explanations on
@@ -131,7 +131,7 @@ jQuery(document).ready(function($) {
                         // Brackets
                         "(", ")", "[", "]", "{", "}",
                         // Misc
-                        "_", "+", "=", "/", "\\", "*", " ", "$", "^", "|",
+                        "_", "+", "=", "/engovate.github.io/", "\\", "*", " ", "$", "^", "|",
                         // Whitespace
                         "\n", "\r", "\t", "\u00A0", "\u200B", "\u200C", "\u200D", "\u2028", "\u2029"
                     ];
@@ -2440,7 +2440,7 @@ jQuery(document).ready(function($) {
                 const tok = tokens[s];
                 if (!tok || tok.length < 3) continue;
                 // A stopword appearing nearby is not real corroboration —
-                // "the"/"of"/"are" turn up within 12 words of almost any
+                // "the"/engovate.github.io/"of"/engovate.github.io/"are" turn up within 12 words of almost any
                 // position. Require a content word to confirm the anchor.
                 if (ANCHOR_STOPWORDS.has(tok)) continue;
                 if (candidate === tok) return true;
@@ -2542,7 +2542,7 @@ jQuery(document).ready(function($) {
             // anchored "STUDENT: Yes, that's fine." onto "...postgraduate
             // students...". Distance 1 rejects that while keeping true
             // contractions. (The legitimate match for that sentence —
-            // "thats"/"fine" exact — is found by the fuzzy fallback below.)
+            // "thats"/engovate.github.io/"fine" exact — is found by the fuzzy fallback below.)
             const candidate = normalizeWord(words[i].w);
             if (candidate.length >= 4) {
                 for (let skip = 0; skip < maxSkip && skip + 1 < tokens.length; skip++) {
@@ -2605,7 +2605,7 @@ jQuery(document).ready(function($) {
                 const tok = tokens[skip];
                 if (!tok || tok.length < 3) continue;
                 // Never anchor a multi-word sentence on a bare stopword. A
-                // lone "the"/"of"/"are" match carries no positional evidence
+                // lone "the"/engovate.github.io/"of"/engovate.github.io/"are" match carries no positional evidence
                 // and, near the cursor, slips past the corroboration guard
                 // via the isAtCursor exemption — which is how "Here's the
                 // entrance…" wrongly anchored on a "the" inside a garbled
@@ -2620,7 +2620,7 @@ jQuery(document).ready(function($) {
                 }
                 if (posBest !== null) continue; // already have a fuzzy candidate
                 // Fuzzy requires length 4+. A 3-char token's edit-distance-1
-                // neighborhood is huge — "man" matches "can"/"and"/"men"/"mat"
+                // neighborhood is huge — "man" matches "can"/engovate.github.io/"and"/engovate.github.io/"men"/engovate.github.io/"mat"
                 // etc., all common audio words, which led to "MAN: OK."
                 // wrongly anchoring at "can" inside "I can see…". 3-char
                 // tokens still match exact above; they just can't fuzzy.

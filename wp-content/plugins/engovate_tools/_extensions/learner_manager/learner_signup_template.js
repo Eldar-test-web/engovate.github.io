@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
                     },
                     success: function (response) {
                         if (response.success) {
-                            window.location.href = '/learner-profile/';
+                            window.location.href = '/engovate.github.io/learner-profile/';
                         } else {
                             if(response.data['error'] == 'rate_limit_exceeded') {
                                 alert(response.data['message']);

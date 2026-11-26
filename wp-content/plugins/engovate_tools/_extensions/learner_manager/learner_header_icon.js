@@ -24,7 +24,7 @@ jQuery(document).ready(function ($) {
             },
             success: function (response) {
                 if (response.success) {
-                    window.location.href = '/learner-login/';
+                    window.location.href = '/engovate.github.io/learner-login/';
                 } else {
                     if(response.data['error'] == 'rate_limit_exceeded') {
                         alert(response.data['message']);

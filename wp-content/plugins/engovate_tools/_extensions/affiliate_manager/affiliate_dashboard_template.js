@@ -2,7 +2,7 @@ jQuery(document).ready(function ($) {
     var $dashboard = $('.affiliate-dashboard');
     if (!$dashboard.length) return;
 
-    var ajaxurl = (typeof affiliate_dashboard_ajax !== 'undefined') ? affiliate_dashboard_ajax.ajaxurl : '/wp-admin/admin-ajax.php';
+    var ajaxurl = (typeof affiliate_dashboard_ajax !== 'undefined') ? affiliate_dashboard_ajax.ajaxurl : '/engovate.github.io/wp-admin/admin-ajax.php';
     var $nonce = $dashboard.find('input[name="affiliate_dashboard_nonce"]');
 
     function nonce() {

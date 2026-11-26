@@ -47,13 +47,13 @@ jQuery(document).ready(function ($) {
         '<textarea id="definition" placeholder="What it means" rows="4"></textarea>' +
         '</div>' +
         '<button type="submit" class="flashcard-popup-save">Save Flashcard</button>' +
-        '<a href="/flashcards/" class="go-to-all-flashcards-link" target="_blank" rel="noopener">Go to all flashcards</a>' +
+        '<a href="/engovate.github.io/flashcards/" class="go-to-all-flashcards-link" target="_blank" rel="noopener">Go to all flashcards</a>' +
         '</form>' +
         '<div id="flashcard-premium-required">' +
         '<h3>Add Flashcard</h3>' +
         '<p>Saving flashcards needs Premium. Your sets are saved to your account, so they follow you to any device you sign in on.</p>' +
-        '<a href="/payment-plans/" class="flashcard-popup-save" target="_blank" rel="noopener">Upgrade to Premium</a>' +
-        '<a href="/flashcards/" class="go-to-all-flashcards-link" target="_blank" rel="noopener">Go to all flashcards</a>' +
+        '<a href="/engovate.github.io/payment-plans/" class="flashcard-popup-save" target="_blank" rel="noopener">Upgrade to Premium</a>' +
+        '<a href="/engovate.github.io/flashcards/" class="go-to-all-flashcards-link" target="_blank" rel="noopener">Go to all flashcards</a>' +
         '</div>' +
         '</div>' +
         '</div>');
@@ -268,7 +268,7 @@ jQuery(document).ready(function ($) {
     $('#view-flashcard-set-button').on('click', function (event) {
         //The same URL the archive's Learn buttons build. Opened in a new tab like the links beside it,
         //so a learner keeps the page they were reading - and whatever they had already typed here.
-        window.open('/flashcards/custom/?local-set-id=' +
+        window.open('/engovate.github.io/flashcards/custom/?local-set-id=' +
             encodeURIComponent($('#flashcard-set-select').val()), '_blank', 'noopener');
     });
 

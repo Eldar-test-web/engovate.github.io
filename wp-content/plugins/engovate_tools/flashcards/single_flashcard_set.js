@@ -588,7 +588,7 @@ jQuery(document).ready(function ($) {
     $('.update-flashcard-button').on('click', function(e) {
         writeSavedSetFromScreen(updatedSet=> {
             alert("Flashcard set updated successfully!");
-            var toPath = window.location.protocol + '//' + window.location.host + window.location.pathname;
+            var toPath = window.location.protocol + '/engovate.github.io//' + window.location.host + window.location.pathname;
             toPath += '?local-set-id=' + encodeURIComponent(updatedSet.setId);
             window.location.href = toPath;
         },
@@ -626,8 +626,8 @@ jQuery(document).ready(function ($) {
         if(userConfirmed) {
             deleteSavedSet(savedSetId, () => {
                 alert("Flashcard set deleted successfully!");
-                var toPath = window.location.protocol + '//' + window.location.host;
-                window.location.href = toPath + '/flashcards/?category=local';
+                var toPath = window.location.protocol + '/engovate.github.io//' + window.location.host;
+                window.location.href = toPath + '/engovate.github.io/flashcards/?category=local';
             }, e => {
                 alert((e && e.responseJSON && e.responseJSON.data && e.responseJSON.data.message) || "Error deleting flashcard set!");
             });

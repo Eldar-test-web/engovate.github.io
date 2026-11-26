@@ -670,7 +670,7 @@ jQuery(document).ready(function($) {
 
                 ZipLoader.getFiles = (jsZip, paths) =>
                     Promise.all(paths.map(async path => {
-                        const fileName = path.slice(path.lastIndexOf('/') + 1);
+                        const fileName = path.slice(path.lastIndexOf('/engovate.github.io/') + 1);
                         const blob = await jsZip.file(path).async('blob');
                         return new File([blob], fileName);
                     }));

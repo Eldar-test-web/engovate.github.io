@@ -19,7 +19,7 @@ jQuery(document).ready(function ($) {
                 if (response.success) {
                     $('#learner-password-reget-form').html('You have successfully set a new password!');
                     setTimeout(() => {
-                        window.location.href = '/learner-login/';
+                        window.location.href = '/engovate.github.io/learner-login/';
                     }, 2000);
                 } else {
                     if(response.data['error'] == 'rate_limit_exceeded') {

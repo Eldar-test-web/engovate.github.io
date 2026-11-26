@@ -43,7 +43,7 @@ jQuery(document).ready(function ($) {
                     },
                     success: function (response) {
                         if (response.success) {
-                            window.location.href = '/learner-profile/';
+                            window.location.href = '/engovate.github.io/learner-profile/';
                         } else {
                             alert(response.data && response.data.message ? response.data.message : response.data);
                         }
@@ -82,7 +82,7 @@ jQuery(document).ready(function ($) {
             },
             success: function (response) {
                 if (response.success) {
-                    window.location.href = '/learner-profile/';
+                    window.location.href = '/engovate.github.io/learner-profile/';
                 } else {
                     alert(response.data && response.data.message ? response.data.message : response.data);
                 }
