@@ -1,0 +1,111 @@
+.ipw-archive-wrap {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 16px;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+.ipw-archive-header {
+    text-align: center;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+}
+
+.ipw-archive-header h1 {
+    margin: 0 0 6px !important;
+    font-size: 32px !important;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.ipw-archive-header p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Search box under the intro, styled like the site's other archive searches. */
+.ipw-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin: 0 0 22px;
+}
+
+.ipw-search input[type="search"] {
+    width: 20rem;
+    padding: 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.ipw-search button {
+    margin-left: 10px;
+}
+
+.ipw-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 10px;
+}
+
+.ipw-links li a {
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.ipw-links li a:hover {
+    background-color: whitesmoke;
+}
+
+.ipw-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.ipw-pagination .page-numbers {
+    margin: 5px;
+    padding: 0px 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+    text-decoration: none;
+}
+
+.ipw-pagination .page-numbers:hover {
+    background-color: whitesmoke;
+}
+
+.ipw-pagination .page-numbers.current {
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+
+.ipw-pagination .page-numbers.dots {
+    border: none;
+    background-color: transparent;
+}
+
+.ipw-empty {
+    font-size: 16px;
+    color: #777;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .ipw-archive-header h1 { font-size: 28px !important; }
+    .ipw-search input[type="search"] { width: calc(65% - 2.5px); }
+}

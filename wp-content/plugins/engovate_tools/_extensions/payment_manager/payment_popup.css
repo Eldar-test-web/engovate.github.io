@@ -1,0 +1,63 @@
+.payment-popup-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.payment-popup-wrapper {
+    position: relative;
+}
+
+.payment-popup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    min-width: 50vw;
+    max-width: 90vw;
+    max-height: 80vh;
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.payment-popup-reason {
+    color: red;
+    text-align: center;
+}
+
+.payment-popup-reminder {
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 16px;
+}
+
+.close-payment-popup-button {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.close-payment-popup-button:hover {
+    color: white;
+    background-color: red;
+}

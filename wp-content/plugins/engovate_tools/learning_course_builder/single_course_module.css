@@ -1,0 +1,221 @@
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 18px !important;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+.ast-breadcrumbs-wrapper {
+    display: none !important;
+}
+
+.site-main {
+    width: 100%;
+}
+
+.course_module {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px !important;
+}
+
+.entry-content {
+    max-width: 768px;
+    padding: 10px;
+}
+
+.entry-header {
+    text-align: center !important;
+}
+
+.learning-course {
+    font-size: 18px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.module-parts-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.module-parts {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.module-part {
+    position: relative;
+    border: 1px solid gray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.module-part-wrapper {
+    padding: 50px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: black;
+    line-height: 1;
+}
+
+.module-part-wrapper:hover {
+    transform: scale(1.05);
+    color: black;
+}
+
+.module-part-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.module-part-label {
+    font-size: 22px !important;
+    line-height: 1.6;
+    font-weight: bold;
+}
+
+.module-part-why-learn {
+    display: block;
+    font-size: 13px;
+    line-height: 1;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 5px;
+    background-color: lightyellow;
+    color: black;
+    text-decoration: underline;
+    border-top: 1px solid lightgray;
+    cursor: pointer;
+}
+
+.module-part-why-learn-content-container {
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.module-part-why-learn-content-wrapper {
+    position: relative;
+    width: 550px;
+    max-width: 80%;
+}
+
+.module-part-why-learn-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: white;
+    max-width: 90vw;
+    max-height: 80vh;
+    padding: 20px 20px 15px 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.close-module-part-why-learn-content-button {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.close-module-part-why-learn-content-button:hover {
+    color: white;
+    background-color: red;
+}
+
+.next-part-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.course-module-reminder {
+    font-size: 16px;
+    line-height: 1.5;
+    font-style: italic;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.module-part-locker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.module-part-locker i {
+    position: absolute;
+    background-color: white;
+    border: 1px solid darkorange;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 50px;
+    color: darkorange;
+    text-align: center;
+}
+
+.comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    width: 100%;
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}

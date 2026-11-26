@@ -1,0 +1,631 @@
+#main {
+    width: 100%;
+}
+
+.entry-header {
+    text-align: center !important;
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 22px;
+}
+
+hr {
+    margin-bottom: 0px;
+    width: 100%;
+}
+
+.dictation_test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px !important;
+    padding: 0px !important;
+}
+
+.entry-content {
+    max-width: 768px;
+    padding: 10px;
+}
+
+.dictation-audio {
+    width: 100%;
+}
+
+.dictation-audio.disabled {
+    pointer-events: none;
+    opacity: 0.4;
+}
+
+.mode-announcement {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.switch-mode-button {
+    cursor: pointer;
+}
+
+.dictation-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
+    max-width: 100%;
+}
+
+.full-recall-container {
+    width: 100%;
+}
+
+.dictation-card-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.dictation-unit-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.2s;
+    transform: translateX(0);
+}
+
+.dictation-unit-wrapper {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    margin-bottom: 5px;
+    padding: 20px;
+    border: 2px dashed gray;
+    border-radius: 5px;
+}
+
+.full-recall-container .dictation-unit-wrapper {
+    display: none;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.dictation-unit-container.slide-right {
+    transform: translateX(30%);
+    opacity: 0;
+}
+
+.dictation-unit-container.slide-left {
+    transform: translateX(-30%);
+    opacity: 0;
+}
+
+.user-input-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    border: 1px solid gray;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+
+.dictation-user-input {
+    width: 100%;
+    font-size: 22px;
+    padding: 20px;
+    background-color: white;
+    border: none;
+    color: black;
+    width: 100%;
+    text-align: center;
+    resize: none;
+}
+
+.full-recall-container .dictation-user-input {
+    font-size: 18px;
+}
+
+.dictation-user-input:focus {
+    border: none;
+}
+
+.dictation-user-input:disabled {
+    background-color: rgb(235, 235, 235);
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+.dictation-mode-wrapper {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.dictation-mode-wrapper label {
+    font-size: 16px;
+}
+
+.dictation-mode-wrapper select {
+    padding: 2px 8px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+.control-buttons {
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.control-buttons button {
+    font-size: 16px;
+}
+
+.control-buttons label {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-size: 14px;
+    user-select: none;
+}
+
+.control-buttons input {
+    pointer-events: none;
+}
+
+.control-buttons label:hover {
+    background-color: whitesmoke;
+}
+
+.previous-unit-button,
+.previous-unit-button:focus {
+    background-color: rgb(23, 38, 255);
+}
+
+.previous-unit-button:hover {
+    background-color: rgb(0, 76, 255);
+}
+
+.next-unit-button,
+.next-unit-button:focus {
+    background-color: rgb(23, 38, 255);
+}
+
+.next-unit-button:hover {
+    background-color: rgb(0, 76, 255);
+}
+
+.relisten-dictation-button,
+.relisten-dictation-button:focus {
+    background-color: rgb(74, 74, 74);
+}
+
+.relisten-dictation-button:hover {
+    background-color: rgb(106, 106, 106);
+}
+
+.check-dictation-button,
+.check-dictation-button:focus {
+    margin-right: 5px;
+    background-color: darkviolet;
+}
+
+.check-dictation-button:hover {
+    background-color: rgb(167, 0, 238);
+}
+
+.show-answer-button,
+.show-answer-button:focus {
+    background-color: darkorange;
+}
+
+.show-answer-button:hover {
+    background-color: rgb(255, 158, 40);
+}
+
+.auto-margin-left {
+    margin-left: auto;
+}
+
+.dictation-unit-counter {
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(100, 100, 100);
+}
+
+.transcript-container-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.transcript-container-wrapper-inner {
+    width: 768px;
+    max-width: 100%;
+}
+
+.transcript-container {
+    display: none;
+    overflow: auto;
+    border: 1px solid gray;
+    margin-top: 5px;
+    border-radius: 5px;
+    height: 40vh;
+    width: 100%;
+}
+
+.transcript-line {
+    padding: 10px 15px 15px 15px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+}
+
+.transcript-line:hover {
+    background-color: whitesmoke;
+}
+
+.transcript-line.highlighted {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.transcript-line.correct {
+    background-color: green;
+    color: white;
+}
+
+.transcript-line.incorrect {
+    background-color: maroon;
+    color: white;
+}
+
+.transcript-line.shadowing-checked {
+    color: white;
+}
+
+.word.highlighted {
+    background-color: rgb(235, 0, 0);
+}
+
+.speaker {
+    font-style: italic;
+    font-size: 13px;
+    color: rgb(100, 100, 100);
+}
+
+.user-audio {
+    display: none;
+}
+
+.transcript-line.correct .speaker, 
+.transcript-line.incorrect .speaker,
+.transcript-line.highlighted .speaker,
+.transcript-line.shadowing-checked .speaker {
+    color: rgb(230, 230, 230);
+}
+
+.dictation-result-container {
+    display: none;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: 10px;
+    text-align: center;
+    font-size: 14px;
+    padding: 0px 10px;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+}
+
+.shadowing-result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shadowing-user-audio {
+    display: none;
+    height: 40px;
+    margin-top: -20px;
+}
+
+.shadowing-result {
+    display: none;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: white;
+    background-color: green;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.correct-answer-counter-wrapper {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.dictation-diff {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px 16px;
+    border: 1px solid #d4d4dc;
+    border-radius: 8px;
+    background-color: #fafafa;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.dictation-diff-label {
+    font-size: 12px;
+    color: #888;
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+.dictation-diff-text {
+    font-size: 18px;
+    line-height: 1.7;
+    word-break: break-word;
+}
+
+.dict-diff-missing {
+    color: #c0392b;
+    font-weight: 700;
+}
+
+.dict-diff-extra {
+    color: #c0392b;
+    text-decoration: line-through;
+}
+
+.record-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    font-size: 35px;
+    border-radius: 50%;
+    background-color: crimson;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.record-button:disabled {
+    background-color: lightgray;
+    border: none;
+}
+
+.record-button i {
+    z-index: 20;
+}
+
+.button-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background: rgba(255, 255, 255, 0.4);
+    transition: width 1s linear;
+    z-index: 10;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.recording {
+    animation: pulse 1s infinite;
+}
+
+.comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    width: 100%;
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    white-space: nowrap;
+    bottom: 120%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgb(100, 100, 100);
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    position: absolute;
+}
+
+.tooltip .tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgb(100, 100, 100) transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.tooltip .tooltiptext.guidance {
+    visibility: visible;
+    bottom: auto;
+    top: 120%;
+}
+
+.tooltip .tooltiptext.guidance::after {
+    top: auto;
+    bottom: 100%;
+    border-color: transparent transparent rgb(100, 100, 100) transparent;
+}
+
+.dictation-translation-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(60, 60, 60);
+    color: white;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    font-size: 20px;
+    padding: 0px;
+}
+
+.dictation-translation-button:hover {
+    background-color: rgb(80, 80, 80);
+}
+
+.dictation-translation-button:focus {
+    background-color: rgb(60, 60, 60);
+}
+
+.text-translation-popup {
+    position: absolute;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    padding: 5px 10px;
+    max-width: 600px;
+    display: none;
+}
+
+.text-translation-popup select {
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    line-height: 1;
+    padding: 5px 5px;
+    margin-bottom: 5px;
+}
+
+.text-translation-popup button {
+    background-color: #0049af;
+    font-size: 14px;
+    width: 100%;
+}
+
+.translated-dictation-text {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.post-locker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.post-locker i {
+    position: absolute;
+    background-color: white;
+    border: 1px solid darkorange;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    font-size: 50px;
+    color: darkorange;
+    text-align: center;
+}
+
+.spinner {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

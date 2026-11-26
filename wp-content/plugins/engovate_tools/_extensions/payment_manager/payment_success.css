@@ -1,0 +1,84 @@
+.payment-success-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 40px 20px 30px 20px;
+}
+
+.payment-confirmation-form, .bulk-payment-confirmation-form {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.payment-confirm-activation-code {
+    font-size: 30px;
+}
+
+/* a Stripe order id is one unbroken run of about 66 characters, which would run off the edge of a phone screen */
+.payment-confirm-order-id {
+    overflow-wrap: anywhere;
+}
+
+.payment-confirm-activation-codes {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 320px;
+    overflow-y: auto;
+    width: 100%;
+    padding: 12px 15px;
+    background-color: whitesmoke;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-weight: bold;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.go-to-profile-button {
+    margin-bottom: 10px;
+}
+
+.spinner-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.spinner {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.payment-confirm-shortfall {
+    display: none;
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #f0c9c9;
+    border-radius: 5px;
+    background-color: #fff5f5;
+    color: #8a2a2a;
+    font-weight: bold;
+}

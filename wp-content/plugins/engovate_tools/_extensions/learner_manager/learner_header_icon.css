@@ -1,0 +1,89 @@
+.learner-header-icon {
+    position: relative;
+}
+
+.learner-header-icon-image {
+    border-radius: 50%;
+    background-color: black;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    line-height: 40px;
+    display: inline-block;
+    text-align: center;
+}
+
+.learner-header-icon-image.premium {
+    background: linear-gradient(135deg, #FFB84D, #FFE066);
+    color: #111111;
+    border: 2px solid #FFA64D;
+    position: relative;
+}
+
+.learner-header-icon-image.premium::after {
+    content: "★";
+    position: absolute;
+    right: -6px;
+    top: -6px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #111111;
+    color: #FFA500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.learner-header-icon-button:focus {
+    outline: none;
+}
+
+.learner-header-icon-button i {
+    color: darkgray;
+    margin-left: 5px;
+}
+
+.learner-header-icon-dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    right: 0px;
+    top: 30px;
+    white-space: nowrap;
+}
+
+.learner-header-icon-dropdown-menu a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.learner-header-icon-dropdown-menu a:hover {
+    color: white;
+    background-color: rgb(65, 65, 65);
+}
+
+.learner-header-icon-login-button {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px 15px;
+    font-size: 16px;
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    white-space: nowrap;
+    line-height: 1.2;
+}
+
+.learner-header-icon-login-button:hover {
+    color: white;
+    background-color: rgb(50, 50, 50);
+}

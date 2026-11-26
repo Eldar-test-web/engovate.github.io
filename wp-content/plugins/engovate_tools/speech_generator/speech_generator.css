@@ -1,0 +1,24 @@
+#generate-male-speech-button:disabled, #generate-female-speech-button:disabled {
+    background-color: gray;
+}
+
+#speech-generator-result-container {
+    width: 100%;
+    margin-top: 30px;
+    display: none;
+    flex-direction: column;
+}
+
+#speech-generator-result-audio {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+#download-speech-button {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+}

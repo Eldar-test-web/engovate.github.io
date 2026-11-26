@@ -1,0 +1,87 @@
+#learner-login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 30px;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#learner-login-form input {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+#learner-login-form input:focus {
+    outline-color: black;
+}
+
+#learner-login-form button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#learner-login-form button:disabled {
+    background-color: darkgray;
+}
+
+.google-signin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b58ff;
+    padding: 15px;
+    gap: 10px;
+    font-size: 18px;
+}
+
+.google-signin-button:hover, .google-signin-button:focus {
+    background-color: #0044ff;
+}
+
+.google-signin-button i {
+    font-size: 22px;
+}
+
+.signin-divider {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: rgb(80, 80, 80);
+}
+
+.signin-divider span {
+    max-width: 80%;
+    text-align: center;
+}
+
+.signin-divider::before,
+.signin-divider::after {
+    flex: 1;
+    content: '';
+    padding: 1px;
+    background-color: lightgray;
+    margin: 5px;
+}
+
+.create-account-link {
+    text-align: center;
+}
+
+.signin-email-notice {
+    font-size: 13px;
+    line-height: 1.5;
+    color: rgb(100, 100, 100);
+    text-align: center;
+    margin-top: 8px;
+}

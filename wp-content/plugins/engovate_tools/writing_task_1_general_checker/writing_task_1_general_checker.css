@@ -1,0 +1,94 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.col-md-left {
+   width: 70%;
+}
+
+.col-md-right {
+    width: 30%;
+    padding-left: 2rem;
+    text-align: center;
+}
+
+#writing-task-1-input-form .button-wrapper {
+    display: flex;
+    gap: 5px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+#writing-task-1-input-form .button-wrapper button:disabled {
+    background-color: gray;
+}
+
+.writing-task-1-topic-wrapper {
+    position: relative;
+}
+
+.writing-task-1-topic-wrapper .generate-random-topic-button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    background-color: #007bff;
+    color: white;
+    padding: 5px;
+    line-height: 1;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.writing-task-1-topic-wrapper .generate-random-topic-button:disabled {
+    background-color: gray;
+}
+
+#writing-task-1-topic {
+    margin-bottom: 20px;
+}
+
+#writing-task-1-topic .content-editable-div {
+    font-weight: bold;
+}
+
+#writing-task-1-topic .word-count {
+    display: none;
+}
+
+#improve-button {
+    background-color: darkslateblue;
+}
+
+#enhance-natural-button {
+    margin-left: auto;
+    background-color: teal;
+}
+
+.essay-publish-notice {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 2;
+}
+
+.compare-enhance-container, .compare-natural-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: none;
+}
+
+.compare-enhance-container h3, .compare-natural-container h3 {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .col-md-left, .col-md-right {
+        width: 100%;
+    }
+
+    .col-md-right {
+        padding-left: 0px;
+    }
+}

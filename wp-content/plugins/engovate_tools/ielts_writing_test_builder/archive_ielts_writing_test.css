@@ -1,0 +1,534 @@
+.ielts_writing_test_filter_main {
+    width: 100%;
+}
+
+.ielts_writing_test_filter_container {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+}
+
+.ielts_writing_test_filter_wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.ielts-writing-search-tip {
+    display: block;
+    font-size: 11px;
+    line-height: 1.3;
+    color: #444;
+    margin-top: 4px;
+}
+
+.clear_all_filters {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #e57373;
+    background-color: #fff5f5;
+    color: #c62828;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.clear_all_filters:hover {
+    background-color: #c62828;
+    color: white;
+}
+
+.ielts_writing_test_filter_results_wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: 5px;
+}
+
+.ielts_writing_test_filter_results_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#ielts_writing_test_filter_form {
+    width: 25%;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+[id^="ielts_writing_test_filter_results"] {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+}
+
+#ielts_writing_test_search {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: white;
+    padding: 10px;
+}
+
+.select2 {
+    width: 100% !important;
+}
+
+.select2 ul {
+    margin: 0px !important;
+}
+
+.select2 li {
+    font-size: 14px;
+}
+
+.select2 textarea {
+    display: flex;
+    line-height: 100%;
+    height: 22px !important;
+    margin: 0px !important;
+}
+
+.select2-selection {
+    border: 1px solid lightgray !important;
+    border-radius: 3px !important;
+    height: 100%;
+    padding: 15px 10px !important;
+}
+
+.select2-search {
+    display: block;
+}
+
+.ielts_writing_test_filter_wrapper select {
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    padding: 10px;
+    line-height: 1.5;
+    width: 100%;
+    background-color: white;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+legend {
+    margin-bottom: 0px !important;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ielts_writing_test_filter_container article {
+    position: relative;
+    width: 30%;
+    margin: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ielts_writing_test_filter_container article h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+.ielts_writing_test_filter_container article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover; /* Add this rule to preserve the aspect ratio */
+}
+
+.ielts_writing_test_filter_container article .ielts-writing-take-test-button {
+    display: block;
+    width: 100%;
+    margin-top: auto; /* keep the button at the bottom of the card */
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: teal;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.ielts_writing_test_filter_container article .ielts-writing-take-test-button:hover {
+    background-color: teal;
+    color: white;
+}
+
+.ielts-writing-practice-part-button {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: darkslateblue;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.ielts-writing-practice-part-button:hover {
+    background-color: darkslateblue;
+    color: white;
+}
+
+/* Part-picker popup (matches the create-custom-conversation-popup style). */
+.ielts-writing-part-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ielts-writing-part-modal[hidden] {
+    display: none;
+}
+
+.ielts-writing-part-modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ielts-writing-part-modal-dialog {
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    width: 90%;
+    max-width: 480px;
+}
+
+.ielts-writing-part-modal-close {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 18px;
+    line-height: 1;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ielts-writing-part-modal-title {
+    margin: 0 30px 4px 0;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.ielts-writing-part-modal-sub {
+    color: #444;
+    font-size: 14px;
+    margin: 0 0 12px;
+    line-height: 1.6;
+}
+
+.ielts-writing-part-modal-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.ielts-writing-part-modal-list a {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.ielts-writing-part-modal-list a:hover {
+    border-color: #333;
+    background-color: #fafafa;
+}
+
+.ielts-writing-part-modal-list a.locked,
+.ielts-writing-part-modal-list a.locked:hover {
+    color: #6c757d;
+    background-color: rgba(108, 117, 125, 0.08);
+    border-color: rgba(108, 117, 125, 0.28);
+}
+
+.ielts-writing-part-modal-range {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.ielts-writing-part-modal-type {
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: auto;
+}
+
+/* Hidden: every card in the archive is a full test now, so the badge says nothing. */
+.ielts-writing-test-length-type {
+    display: none;
+}
+
+.ielts-writing-test-length-type span {
+    position: absolute;
+    top: -9px;
+    left: 10px;
+    display: inline-block;
+    padding: 0px 10px;
+    line-height: 1.2;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: white;
+    color: black;
+}
+
+.ielts-writing-test-length-type .full_test {
+    background-color: lightyellow;
+}
+
+.ielts-writing-section-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 30px 0 10px 0;
+}
+
+.ielts-writing-section-divider {
+    margin: 20px 0;
+}
+
+.completed-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+}
+
+.result-progress-bar {
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.result-progress {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.result-summary {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.result-summary a {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.ielts-writing-filter-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.ielts-writing-filter-pagination .page-numbers {
+    margin: 5px;
+    padding: 0px 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.ielts-writing-filter-pagination .page-numbers:hover {
+    background-color: rgb(232, 232, 232);
+}
+
+.ielts-writing-filter-pagination .page-numbers.current {
+    font-weight: bold;
+    background-color: whitesmoke;
+}
+
+.ielts_writing_test_category_filter_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.ielts_writing_test_category_filter_button {
+    position: relative;
+    padding: 10px 15px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.ielts_writing_test_category_filter_button:hover {
+    background-color: rgb(232, 232, 232);
+    border-color: #888;
+}
+
+.ielts_writing_test_category_filter_button.current {
+    font-weight: bold;
+    background-color: #333;
+    border-color: #333;
+    color: white;
+}
+
+.ielts_writing_test_category_featured_badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #333;
+    color: white;
+    font-size: 9px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.ielts_writing_test_active_category {
+    position: absolute;
+    top: -10px;
+    left: 12px;
+    font-size: 12px;
+    line-height: 1;
+    color: #555;
+    background-color: white;
+    padding: 2px 8px;
+    margin: 0;
+}
+
+.ielts-archive-progress-notice {
+    font-size: 13px;
+    line-height: 1.5;
+    color: #1565c0;
+    background-color: #e8f4fd;
+    border: 1px solid #90caf9;
+    border-radius: 5px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+}
+
+.ielts-archive-progress-notice a {
+    color: #1565c0;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.ielts_writing_test_category_description {
+    margin-top: 5px;
+    margin-bottom: 15px;
+    font-size: 13px;
+    color: #333;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.post-locker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-locker i {
+    background-color: white;
+    border: 1px solid darkorange;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    color: darkorange;
+}
+
+/* Add this media query for mobile and tablet devices */
+@media (max-width: 1024px) {
+    .ielts_writing_test_filter_wrapper {
+        flex-direction: column;
+    }
+
+    #ielts_writing_test_filter_form {
+        width: 100%;
+    }
+
+    .ielts_writing_test_filter_results_wrapper {
+        width: 100%;
+    }
+
+    /* Styles for displaying filter by type horizontally */
+    #ielts_writing_test_filter_form fieldset div {
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .ielts_writing_test_filter_container article {
+        width: 40%;
+    }
+
+    .ielts_writing_test_filter_container article .ielts-writing-take-test-button,
+    .ielts_writing_test_filter_container article .ielts-writing-practice-part-button {
+        font-size: 13px;
+        padding: 8px;
+    }
+}

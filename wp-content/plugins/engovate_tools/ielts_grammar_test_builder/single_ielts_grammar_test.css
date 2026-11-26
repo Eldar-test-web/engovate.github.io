@@ -1,0 +1,251 @@
+#main {
+    width: 100%;
+}
+
+.entry-header {
+    text-align: center !important;
+    margin-top: 20px !important;
+    margin-bottom: 0px !important;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+.grammar-test-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 768px;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.grammar-intro {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grammar-empty {
+    text-align: center;
+    font-style: italic;
+    color: gray;
+}
+
+.grammar-questions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: grammar-question;
+}
+
+.grammar-question {
+    counter-increment: grammar-question;
+    border: 2px dashed gray;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.grammar-question.correct {
+    border-color: seagreen;
+}
+
+.grammar-question.incorrect {
+    border-color: crimson;
+}
+
+.grammar-question-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.grammar-question-text::before {
+    content: counter(grammar-question) ". ";
+}
+
+.grammar-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.grammar-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.grammar-option:hover {
+    background-color: whitesmoke;
+}
+
+.grammar-option input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.grammar-option-text {
+    font-size: 16px;
+}
+
+.grammar-option.correct {
+    border-color: seagreen;
+    background-color: rgba(46, 139, 87, 0.12);
+}
+
+.grammar-option.selected-wrong {
+    border-color: crimson;
+    background-color: rgba(220, 20, 60, 0.12);
+}
+
+.grammar-answer-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.grammar-question-typed .grammar-answer-row {
+    margin-top: 0;
+}
+
+.grammar-question .grammar-check-button,
+.grammar-question .grammar-check-button:focus {
+    flex-shrink: 0;
+    margin: 0;
+    padding: 10px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    text-transform: none;
+    color: white;
+    background-color: teal;
+    border: 1px solid teal;
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.grammar-question .grammar-check-button:hover {
+    color: white;
+    background-color: #0a6b6b;
+    border: 1px solid #0a6b6b;
+}
+
+.grammar-question .grammar-check-button:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 2px;
+}
+
+.grammar-question .grammar-answer-input,
+.grammar-question .grammar-answer-input:focus {
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 0;
+    max-width: 400px;
+    height: auto;
+    margin: 0;
+    padding: 10px 12px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: none;
+}
+
+.grammar-question .grammar-answer-input::placeholder {
+    color: rgb(110, 110, 110);
+    opacity: 1;
+}
+
+.grammar-question .grammar-answer-input:focus {
+    border: 1px solid teal;
+    outline: 2px solid teal;
+    outline-offset: 1px;
+}
+
+.grammar-question.correct .grammar-answer-input {
+    border: 1px solid seagreen;
+    background-color: rgba(46, 139, 87, 0.12);
+}
+
+.grammar-question.incorrect .grammar-answer-input {
+    border: 1px solid crimson;
+    background-color: rgba(220, 20, 60, 0.12);
+}
+
+.grammar-correct-answer {
+    margin-top: 12px;
+    padding: 10px 12px;
+    border-radius: 5px;
+    background-color: rgba(46, 139, 87, 0.12);
+    border-left: 4px solid seagreen;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.grammar-explanation {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 5px;
+    background-color: rgb(248, 248, 248);
+    border-left: 4px solid slategray;
+    font-size: 15px;
+    white-space: pre-line;
+}
+
+.grammar-score-container {
+    text-align: center;
+    font-size: 20px;
+    margin: 10px 0 20px 0;
+}
+
+.grammar-score {
+    color: seagreen;
+}
+
+.comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    width: 100%;
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .grammar-test-container {
+        width: 100%;
+    }
+    .grammar-question {
+        padding: 15px;
+    }
+    .grammar-question-text {
+        font-size: 16px;
+    }
+    .grammar-option-text {
+        font-size: 15px;
+    }
+}

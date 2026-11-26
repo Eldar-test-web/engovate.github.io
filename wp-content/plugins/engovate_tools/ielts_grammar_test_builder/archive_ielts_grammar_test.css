@@ -1,0 +1,259 @@
+#site-content {
+    width: 100%;
+}
+
+.archive-header {
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.archive-header h1 {
+    font-size: 2.5rem;
+}
+
+.archive-introduction {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+.ielts-grammar-test-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.ielts-grammar-test-search input[type="search"],
+.ielts-grammar-test-search select {
+    padding: 5px;
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 2px;
+}
+
+.ielts-grammar-test-search input[type="search"] {
+    width: 20rem;
+}
+
+.ielts-grammar-test-search input[type="search"]:focus,
+.ielts-grammar-test-search select:focus {
+    border: 1px solid teal;
+    outline: 2px solid teal;
+    outline-offset: 1px;
+}
+
+.ielts-grammar-test-search button {
+    margin-left: 10px;
+}
+
+.search-results {
+    display: none;
+    margin-bottom: 30px;
+    padding: 30px 20px 10px 20px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 5px;
+}
+
+.ielts-grammar-test-categories {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow: auto;
+    padding: 5px;
+}
+
+.ielts-grammar-test-categories .ielts-grammar-test-category,
+.ielts-grammar-test-categories .ielts-grammar-test-category:focus {
+    flex-grow: 1;
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: normal;
+    white-space: nowrap;
+    color: black;
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.ielts-grammar-test-categories .ielts-grammar-test-category:hover {
+    color: black;
+    background-color: whitesmoke;
+    border: none;
+}
+
+.ielts-grammar-test-categories .ielts-grammar-test-category.active,
+.ielts-grammar-test-categories .ielts-grammar-test-category.active:focus,
+.ielts-grammar-test-categories .ielts-grammar-test-category.active:hover {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    border: none;
+}
+
+.ielts-grammar-test-categories .ielts-grammar-test-category:focus-visible {
+    outline: 2px solid black;
+    outline-offset: -2px;
+}
+
+.ielts-grammar-test-categories .ielts-grammar-test-category.active:focus-visible {
+    outline: 2px solid white;
+    outline-offset: -4px;
+}
+
+.ielts-grammar-test-category i {
+    margin-left: 5px;
+}
+
+.ielts-grammar-test-posts {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.tag-title, .category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.tag-posts, .category-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+article {
+    width: calc(25% - 15px) !important;
+    padding: 10px 10px 5px 10px !important;
+    border: 1px solid gray !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0px !important;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+article .post-header {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+article .post-title{
+    font-size: 0.8rem;
+}
+
+article .post-title a{
+    font-weight: bold;
+}
+
+.post-content {
+    font-size: 0.7rem;
+    flex-grow: 1;
+    margin-bottom: 5px;
+}
+
+.post-content p {
+    margin-bottom: 0px;
+}
+
+.start-grammar-test-button {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: teal;
+}
+
+.start-grammar-test-button:hover {
+    color: white;
+}
+
+.start-grammar-test-button:focus {
+    color: white;
+}
+
+.category-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed gray !important;
+}
+
+.tag-navigation {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.page-numbers {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-numbers.current {
+    background-color: whitesmoke;
+}
+
+.see-all {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tag-posts, .category-posts {
+        gap: 10px;
+    }
+    article {
+        width: calc(50% - 5px) !important;
+    }
+    .ielts-grammar-test-search input[type="search"] {
+        width: calc(65% - 2.5px);
+    }
+    .ielts-grammar-test-search select {
+        width: calc(35% - 2.5px);
+    }
+}

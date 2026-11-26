@@ -1,0 +1,80 @@
+.payment-plan-container h2 {
+    font-size: 30px !important;
+}
+
+.payment-plan-container h3 {
+    font-size: 24px !important;
+}
+
+.payment-plan-container hr {
+    margin-bottom: 0px;
+}
+
+.payment-plan-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.payment-plans {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.payment-plan {
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid lightgray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+.payment-plan.highlighted {
+    border: 3px solid lightcoral;
+}
+
+.payment-plan-header, .payment-plan-body, .payment-plan-footer {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.go-to-checkout-page-button {
+    margin-top: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    display: block;
+    font-weight: bold;
+    text-decoration: none !important;
+}
+
+.go-to-checkout-page-button:hover, .go-to-checkout-page-button:focus {
+    background-color: rgb(220, 0, 0);
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .payment-plans {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 15px;
+    }
+    .payment-overall-description {
+        font-size: 14px;
+    }
+}

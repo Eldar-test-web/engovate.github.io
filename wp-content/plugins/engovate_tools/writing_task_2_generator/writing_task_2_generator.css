@@ -1,0 +1,82 @@
+.writing-task-2-generator-form, .writing-task-2-generator-result {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.writing-task-2-generator-form > div, .writing-task-2-generator-result > div {
+    position: relative;
+    width: 100%;
+}
+
+.writing-task-2-generator-form button[type="submit"] {
+    margin-bottom: 10px;
+}
+
+.writing-task-2-generator-form button[type="submit"]:disabled {
+    background-color: gray;
+}
+
+.writing-task-2-generator-result {
+    display: none;
+    margin-top: 30px;
+}
+
+#writing-task-2-topic .content-editable-div {
+    font-weight: bold;
+}
+
+#writing-task-2-topic {
+    margin-bottom: 20px;
+}
+
+#writing-task-2-idea {
+    margin-bottom: 10px;
+}
+
+.writing-task-2-body-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.writing-task-2-body-count span {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.writing-task-2-body-count select {
+    color: black;
+    background-color: white;
+    line-height: 1;
+    padding: 2px 10px;
+    border: 1px solid darkgray;
+    border-bottom: 3px solid darkgray;
+    border-radius: 5px;
+}
+
+#writing-task-2-idea .editor-placeholder:before {
+    font-size: 0.85rem;
+}
+
+#writing-task-2-topic .word-count, #writing-task-2-idea .word-count {
+    display: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

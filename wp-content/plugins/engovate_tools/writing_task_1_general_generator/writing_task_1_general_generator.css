@@ -1,0 +1,71 @@
+.writing-task-1-general-generator-form, .writing-task-1-general-generator-result {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.writing-task-1-general-generator-form > div, .writing-task-1-general-generator-result > div {
+    position: relative;
+    width: 100%;
+}
+
+.writing-task-1-general-generator-form button[type="submit"] {
+    margin-bottom: 10px;
+}
+
+.writing-task-1-general-generator-form button[type="submit"]:disabled {
+    background-color: gray;
+}
+
+.writing-task-1-general-generator-result {
+    display: none;
+}
+
+.writing-task-1-general-generator-result > div {
+    margin-top: 20px;
+}
+
+#writing-task-1-topic .content-editable-div {
+    font-weight: bold;
+}
+
+#writing-task-1-topic {
+    margin-bottom: 20px;
+}
+
+#writing-task-1-idea {
+    margin-bottom: 20px;
+}
+
+#writing-task-1-idea .editor-placeholder:before {
+    font-size: 0.85rem;
+}
+
+.writing-task-1-general-generator-result .content-editable-div p {
+    margin-bottom: 1em;
+}
+
+.writing-task-1-general-generator-result .content-editable-div p:last-of-type {
+    margin-bottom: 0;
+}
+
+#writing-task-1-topic .word-count, #writing-task-1-idea .word-count {
+    display: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

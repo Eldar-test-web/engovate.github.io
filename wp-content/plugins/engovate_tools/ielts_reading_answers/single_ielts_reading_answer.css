@@ -1,0 +1,647 @@
+.ira-page {
+    display: block;
+    width: 100%;
+    font-size: 18px;
+}
+
+/* Two-column layout: article (left) + sidebar (right).
+ * Mirrors the speaking-part-answer template's `#main` flex pattern. */
+.ira-main {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.ira-wrap {
+    width: 75%;
+    padding: 18px 22px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+/* Sidebar — sticks beside the article on desktop, stacks below on mobile.
+ * Holds the "Take the full test" CTA (and any future promo/related cards). */
+.ira-sidebar {
+    width: 25%;
+    margin-left: 20px;
+    position: sticky;
+    top: 20px;
+}
+
+.ira-sidebar-card {
+    margin-bottom: 16px;
+}
+
+.ira-sidebar-card:last-child {
+    margin-bottom: 0;
+}
+
+/* Related sections sit BELOW the two-column area. `width: 100%` and `clear: both`
+ * ensure they always take a full row even if a parent theme wrapper uses flex
+ * or floats — otherwise they can end up sitting next to the sidebar on the right. */
+.ira-other-content {
+    width: 100%;
+    margin: 0 auto 40px;
+}
+
+/* HEADER */
+.ira-header {
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 4px solid lightgray;
+}
+
+.ira-page h1.ira-title {
+    margin: 0 0 8px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.ira-page h2.ira-section-heading {
+    margin: 0 0 14px;
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.ira-page h3.ira-qsection-heading {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.ira-page .ira-cta h2 {
+    margin: 0 0 12px;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.ira-subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 8px;
+    font-style: italic;
+}
+
+.ira-subtitle a {
+    color: rgb(224, 0, 0);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ira-excerpt {
+    margin-top: 8px;
+    color: #444;
+    font-size: 16px;
+}
+
+/* SECTION (.ira-section wraps each major block: passage, questions, summary) */
+.ira-section {
+    margin-bottom: 32px;
+}
+
+/* PASSAGE */
+.ira-passage {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-left: 4px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    padding: 16px 20px;
+}
+
+.ira-passage p {
+    margin: 0 0 12px;
+}
+
+.ira-passage p:last-child {
+    margin-bottom: 0;
+}
+
+/* Demoted heading inside the passage — h1-h6 in the source content are
+ * rewritten to <p class="ira-passage-subhead"><strong>…</strong></p> by the
+ * single template. Slightly larger than body text and given extra top space
+ * so it still reads as a subheading / section break for the user, without
+ * polluting the page's actual heading outline. */
+.ira-passage-subhead {
+    margin: 18px 0 10px;
+    font-size: 21px;
+}
+
+/* QUESTION SECTIONS */
+.ira-qsection {
+    margin-bottom: 36px;
+    padding-bottom: 10px;
+}
+
+.ira-qsection-range {
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.4;
+}
+
+/* SECTION CONTENT — wrapped like the test's .ielts-reading-section-content-wrapper:
+ * white background, light gray border, modest padding. Holds the instruction
+ * text and any inline notes/table/diagram structure from post_content. */
+.ira-section-content {
+    margin: 0 0 16px;
+}
+
+.ira-section-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.ira-section-content table th,
+.ira-section-content table td {
+    border: 1px solid #bbb;
+    padding: 8px 10px;
+    text-align: left;
+    vertical-align: top;
+}
+
+/* Inline blank — matches the test's question-number badge:
+ * 30×30 white square with a thin black border. Sits next to the Show button.
+ * `position: relative` anchors the absolute-positioned popup below it. */
+.ira-blank-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    vertical-align: middle;
+    margin: 0 2px;
+    position: relative;
+}
+
+.ira-blank-marker {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ira-toggle-inline-answer, .ira-toggle-inline-answer:focus {
+    padding: 4px 12px;
+    background-color: white;
+    border: 1px solid rgb(224, 0, 0);
+    border-radius: 3px;
+    color: rgb(224, 0, 0);
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.ira-toggle-inline-answer:hover {
+    background-color: rgb(224, 0, 0);
+    color: white;
+}
+
+/* Inline popup — anchored under the Show button, contains answer + evidence
+ * + explanation. Stays out of the flowing content so notes/tables/summaries
+ * keep their layout intact. */
+.ira-inline-popup {
+    display: block;
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    z-index: 10;
+    width: 360px;
+    max-width: calc(100vw - 40px);
+    padding: 10px 14px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-left: 3px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    white-space: normal;
+}
+
+.ira-inline-popup[hidden] {
+    display: none;
+}
+
+.ira-popup-row {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ira-popup-row:last-child {
+    margin-bottom: 0;
+}
+
+/* PER-QUESTION ITEM — visible breathing room between consecutive questions. */
+.ira-q-item {
+    margin-bottom: 28px;
+}
+
+.ira-q-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Question number badge — same as the test's .ielts-reading-question-number:
+ * 30×30 white square with thin black border, sits inline before question text. */
+.ira-q-number {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-right: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.ira-q-text {
+    margin-bottom: 2px;
+}
+
+/* Multiple-choice options shown under the question text.
+ * Force upper-alpha (A, B, C, D...) — the theme's default OL CSS often
+ * overrides the HTML `type="A"` attribute with `list-style-type: decimal`. */
+.ira-q-options {
+    margin: 0;
+    padding: 5px 14px 5px 30px;
+    background-color: white;
+    font-size: 18px;
+    list-style-type: upper-alpha !important;
+}
+
+.ira-q-options li {
+    margin-bottom: 2px;
+    list-style-type: upper-alpha;
+}
+
+.ira-q-options li::marker {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Each answer entry inside the answer block (multiple in two/three/four/five_choices) */
+.ira-answer-entry {
+    margin-bottom: 12px;
+}
+
+.ira-answer-entry:last-child {
+    margin-bottom: 0;
+}
+
+/* PER-QUESTION ANSWER BLOCK (revealed by per-question toggle) */
+.ira-answer-block {
+    margin-top: 10px;
+    padding: 12px 14px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+/* SHOW/HIDE TOGGLE for each question */
+.ira-toggle-answer, .ira-toggle-answer:focus {
+    margin-top: 2px;
+    padding: 6px 14px;
+    background-color: white;
+    border: 1px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: rgb(224, 0, 0);
+    line-height: 1.4;
+}
+
+.ira-toggle-answer:hover {
+    background-color: rgb(224, 0, 0);
+    color: white;
+}
+
+.ira-answer-line {
+    margin: 6px 0;
+    padding: 6px 10px;
+    background-color: #fff5f5;
+    border-left: 3px solid rgb(224, 0, 0);
+    border-radius: 3px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.ira-label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+}
+
+.ira-answer {
+    color: rgb(224, 0, 0);
+}
+
+.ira-evidence,
+.ira-explanation {
+    margin: 8px 0 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* CTA — sidebar card. White background but still noticeable via a thicker
+ * red left border and a soft red-tinted drop shadow. */
+.ira-cta {
+    padding: 18px 16px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-left: 5px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(224, 0, 0, 0.12);
+    text-align: center;
+}
+
+.ira-cta p {
+    margin: 0 0 10px;
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ira-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(224, 0, 0);
+    color: white !important;
+    border: 1px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.ira-btn:hover {
+    background-color: rgb(180, 0, 0);
+    border-color: rgb(180, 0, 0);
+}
+
+/* RELATED SECTIONS (other parts of the same test, other tests) — live in
+ * `.ira-other-content` below the two-column area. */
+.ira-related {
+    margin-top: 24px;
+    padding-top: 20px;
+}
+
+.ira-related-list {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.ira-related-item {
+    margin-bottom: 8px;
+}
+
+.ira-related-link {
+    display: block;
+    padding: 12px 16px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-left: 4px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.ira-related-link:hover {
+    background-color: #fff5f5;
+}
+
+.ira-related-tag {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.ira-related-title {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(224, 0, 0);
+    line-height: 1.4;
+}
+
+.ira-related-see-all {
+    margin-top: 12px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ira-related-see-all a {
+    color: rgb(224, 0, 0);
+    font-weight: bold;
+}
+
+/* EMPTY STATE */
+.ira-card-empty {
+    background-color: #fff5f5;
+    border: 1px solid #ef9a9a;
+    border-radius: 5px;
+    padding: 14px 18px;
+    color: #b71c1c;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+/* SUMMARY TABLE (always visible at the bottom) */
+.ira-summary-section {
+    margin-top: 28px;
+}
+
+.ira-table-scroll {
+    overflow-x: auto;
+}
+
+.ira-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    overflow: hidden;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ira-summary-table thead th {
+    background-color: whitesmoke;
+    border-bottom: 1px solid lightgray;
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.4;
+}
+
+.ira-summary-table tbody td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.ira-summary-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.ira-summary-table .ira-col-q {
+    width: 60px;
+    font-weight: bold;
+    color: rgb(224, 0, 0);
+}
+
+.ira-summary-table .ira-col-answer {
+    width: 140px;
+    color: rgb(224, 0, 0);
+}
+
+/* Editor-supplied extra content */
+.ira-extra-content {
+    margin-top: 24px;
+}
+
+/* Comments — sits between `.ira-main` and `.ira-other-content`, full-width
+ * and centered. Mirrors `.ielts-reading-comment-section` from the test
+ * template. */
+.ira-comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.ira-comment-section .comments-area {
+    max-width: 768px;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+/* Sidebar PDF-export button — same border/text style as the inline reveal
+ * buttons so it reads as a secondary action next to the red CTA below it. */
+.ira-export-pdf-link {
+    display: block;
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    color: rgb(224, 0, 0) !important;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none !important;
+}
+
+.ira-export-pdf-link:hover {
+    background-color: #fff5f5;
+}
+
+/* Print/PDF — isolate the article so the exported PDF shows ONLY the content
+ * inside `.ira-wrap` (passage + questions + summary). Everything else on the
+ * page (theme header/footer, breadcrumbs, sidebar, related sections,
+ * interactive buttons, WP admin bar) is hidden via the visibility trick:
+ *   1. `body *` makes every element invisible (visibility cascades).
+ *   2. `.ira-wrap, .ira-wrap *` flips visibility back on for our article and
+ *      its children.
+ *   3. `.ira-wrap` is positioned absolutely at top:0 left:0 so it renders at
+ *      the page top — invisible siblings still occupy layout but don't paint.
+ * Per-element `display: none` would require knowing every theme wrapper to
+ * hide; the visibility approach is theme-agnostic. */
+@media print {
+    body * {
+        visibility: hidden !important;
+    }
+
+    /* Only the article is visible — the theme's site logo (and everything
+     * else) is hidden. */
+    .ira-wrap,
+    .ira-wrap * {
+        visibility: visible !important;
+    }
+
+    .ira-wrap {
+        position: absolute !important;
+        left: 0 !important;
+        top: 0 !important;
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+    }
+
+    /* Even within the visible article, hide the per-question reveal buttons
+     * — the answers are already in the summary table at the bottom, and the
+     * buttons are interactive-only chrome. */
+    .ira-wrap .ira-toggle-answer,
+    .ira-wrap .ira-toggle-inline-answer {
+        display: none !important;
+    }
+
+    /* Force black ink — print previews otherwise sample `color: inherit`
+     * from theme grey defaults. */
+    .ira-wrap,
+    .ira-wrap p,
+    .ira-summary-table td,
+    .ira-summary-table th {
+        color: #000 !important;
+    }
+
+    /* Answers & Explanations summary starts on its own page. */
+    .ira-summary-section {
+        page-break-before: always;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ira-main {
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    .ira-wrap,
+    .ira-sidebar {
+        width: 100%;
+        margin: 10px 0 !important;
+    }
+
+    .ira-sidebar {
+        position: static;
+    }
+}

@@ -1,0 +1,145 @@
+#reply-title {
+    font-size: 22px !important;
+    font-weight: bold;
+}
+
+.comments-title {
+    font-size: 18px !important;
+    font-weight: bold;
+}
+
+#respond {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#reply-title a{
+    font-size: 14px;
+    margin-left: 15px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: red;
+    color: white;
+}
+
+#comment {
+    border: 1px solid lightgray;
+    border-radius: 5px !important;
+}
+
+#author, #email {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+#url {
+    display: none;
+}
+
+#submit {
+    padding: 5px 15px !important;
+    background-color:#0047AB !important;
+}
+
+.comment-list {
+    margin: 0px;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.comment-list li {
+    margin-left: 40px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 10px;
+    position: relative;
+    background-color: rgb(250, 250, 250);
+    padding: 15px;
+}
+
+.comment-list .children li {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 5px 15px;
+}
+
+.comment-list p {
+    margin-bottom: 0px !important;
+}
+
+.comment-list li::marker {
+    content: '' !important;
+}
+
+.comment-author {
+    font-weight: bold;
+    display: inline-block;
+}
+
+.comment-author a {
+    color: black;
+}
+
+.comment-avatar {
+    position: absolute;
+    left: -45px;
+    top: 25px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgb(235, 235, 235);
+    border-radius: 50%;
+    text-align: center;
+}
+
+.comment-meta {
+    margin-left: 5px;
+    font-size: 13px;
+    margin-top: -5px;
+    display: inline-block;
+}
+
+.comment-meta a{
+    color: rgb(50, 50, 50);
+}
+
+.says {
+    display: none;
+}
+
+.comment-reply-link {
+    font-weight: bold;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.comments-title {
+    padding: 20px !important;
+}
+
+.comment-navigation-wrapper {
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.comment-pagination {
+    display: flex;
+    gap: 10px;
+}
+
+.comment-pagination-item {
+    cursor: pointer;
+    padding: 0px 10px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 5px;
+    background-color: white;
+}
+
+.comment-pagination-item:hover {
+    background-color: whitesmoke;
+}
+
+.comment-pagination-item.current {
+    font-weight: bold;
+    background-color: whitesmoke;
+}

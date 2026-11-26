@@ -1,0 +1,366 @@
+#ast-desktop-header, #ast-mobile-header {
+    display: none !important;
+}
+
+#main {
+    width: 100%;
+}
+
+.site-content .ast-container {
+    max-width: 100%;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+h1 {
+    font-size: 20px;
+}
+
+.site-main header {
+    padding: 10px 15px;
+    text-align: center !important;
+    background-color: rgb(255, 241, 241);
+    margin-bottom: 0px !important;
+}
+
+.writing-improvement-site-header {
+    width: 100%;
+    padding: 5px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid lightgray;
+}
+
+.writing-improvement-header-button-wrapper {
+    display: flex;
+}
+
+.site-logo {
+    max-width: 35px;
+}
+
+#writing-improvement-dropdown-button {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    font-size: 25px;
+    padding: 0px;
+}
+
+.writing-improvement-dropdown-menu {
+    position: relative;
+    display: flex;
+    margin-right: 10px;
+    margin-left: auto;
+}
+
+.writing-improvement-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1001;
+    right: 0px;
+    top: 30px;
+    white-space: nowrap;
+}
+
+.writing-improvement-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.writing-improvement-dropdown-content a:hover {
+    background-color: whitesmoke;
+}
+
+.writing-improvement-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+
+.writing-improvement-topic {
+    margin-bottom: 30px;
+}
+
+.writing-improvement-topic .topic {
+    white-space: pre-line;
+}
+
+.writing-improvement-steps-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+    padding: 25px;
+}
+
+.writing-improvement-steps-wrapper p {
+    margin-bottom: 0px;
+}
+
+.writing-improvement-instruction-overlay {
+    position: absolute;
+    margin-top: 50px;
+    width: 100%;
+    height: calc(100% - 50px);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    padding: 15px;
+    overflow: auto;
+}
+
+.writing-improvement-steps {
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.writing-improvement-step {
+    display: none;
+}
+
+.writing-improvement-idea {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.writing-improvement-step.current{
+    display: block;
+}
+
+.content-editable-div {
+    text-align: left;
+    min-height: 200px;
+}
+
+.writing-improvement-tip {
+    font-size: 13px;
+    margin-top: 5px;
+    line-height: 2;
+}
+
+.writing-improvement-result {
+    display: none;
+}
+
+.writing-improvement-result-button-wrapper {
+    display: flex;
+}
+
+.retry-button, .retry-writing-entire-answer-button {
+    background-color: darkorange;
+}
+
+.retry-button:hover, .retry-button:focus,
+.retry-writing-entire-answer-button:hover, .retry-writing-entire-answer-button:focus {
+    background-color: rgb(255, 157, 37);
+}
+
+.retry-writing-entire-answer-button {
+    display: none;
+}
+
+.next-step-button, .submit-writing-answer-button, .mark-writing-answer-button {
+    background-color: green;
+    margin-left: auto;
+}
+
+.next-step-button:hover, .submit-writing-answer-button:hover, .mark-writing-answer-button:hover,
+.next-step-button:focus, .submit-writing-answer-button:focus, .mark-writing-answer-button:focus  {
+    background-color: rgb(0, 158, 0);
+}
+
+.generate-writing-idea-wrapper {
+    margin-bottom: 20px;
+}
+
+.generate-writing-idea-wrapper a {
+    font-size: 14px;
+    line-height: 2;
+}
+
+.generated-writing-idea {
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.review-writing-improvement-announcement {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: white;
+    background-color: darkgreen;
+}
+
+.writing-improvement-review-step {
+    margin-bottom: 20px;
+}
+
+#writing-band-score-container {
+    display: none;
+    margin-bottom: 50px;
+}
+
+#writing-entire-answer {
+    margin-bottom: 20px;
+}
+
+.word-count {
+    text-align: left;
+}
+
+.writing-improvement-bottom-panel {
+    position: relative;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.writing-improvement-step-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.writing-improvement-palette-step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.writing-improvement-palette-step.current {
+    border: 1px solid lightcoral;
+    background-color: rgb(255, 225, 225);
+    pointer-events: none;
+}
+
+.writing-improvement-palette-step.current span {
+    font-weight: bold;
+}
+
+.entry-content {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.entry-content p {
+    margin-bottom: 15px !important;
+}
+
+.improve_writing_test {
+    padding: 15px !important;
+}
+
+.post-locker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-locker i {
+    position: absolute;
+    background-color: white;
+    border: 1px solid darkorange;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    font-size: 60px;
+    color: darkorange;
+    text-align: center;
+}
+
+.comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    width: 100%;
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+}
+
+.spinner-overlay strong {
+    color: white;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.spinner {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .writing-improvement-palette-step {
+        font-size: 13px;
+        padding: 2px;
+        line-height: 2;
+    }
+
+    .writing-improvement-step-palette {
+        gap: 3px;
+    }
+}

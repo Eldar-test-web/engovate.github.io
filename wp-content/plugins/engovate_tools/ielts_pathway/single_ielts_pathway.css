@@ -1,0 +1,87 @@
+.ipw-main {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.ipw-title { font-size: 32px !important; line-height: 1.3; margin: 0 0 8px; }
+.ipw-intro { font-size: 18px; color: #000; line-height: 1.6; margin: 0 0 22px; }
+
+/* The written article. It sits under the test grids, since the tests are what most visitors came
+   for, but it is still spaced like body copy rather than like the generated blocks above it. */
+.ipw-prose { font-size: 18px; color: #000; line-height: 1.7; margin: 0 0 30px; }
+.ipw-prose h2 { font-size: 26px !important; font-weight: bold; line-height: 1.4; margin: 28px 0 12px; }
+.ipw-prose h3 { font-size: 20px !important; font-weight: bold; line-height: 1.4; margin: 22px 0 10px; }
+.ipw-prose p { margin: 0 0 16px; }
+.ipw-prose ul, .ipw-prose ol { margin: 0 0 16px 22px; }
+.ipw-prose li { margin: 0 0 6px; }
+.ipw-prose table {
+    width: 100%; border-collapse: collapse; margin: 0 0 20px; font-size: 16px;
+}
+.ipw-prose th, .ipw-prose td { border: 1px solid lightgray; padding: 8px 10px; text-align: left; }
+.ipw-prose th { background-color: whitesmoke; font-weight: bold; }
+
+.ipw-test-section { margin: 0 0 34px; }
+.ipw-section-heading { font-size: 26px !important; font-weight: bold; color: #000; line-height: 1.4; margin: 0 0 12px; }
+
+.ipw-empty { font-size: 16px; color: #777; padding: 18px 0; }
+
+.ipw-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+.ipw-card {
+    display: flex; flex-direction: column;
+    border: 1px solid gray; border-radius: 5px;
+    padding: 15px; background-color: white;
+}
+.ipw-card-name { display: block; font-weight: bold; font-size: 16px !important; color: #000; line-height: 1.35; margin: 0; flex: 1; }
+.ipw-card-foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    margin-top: auto; padding-top: 12px; border-top: 1px solid whitesmoke;
+}
+.ipw-card-meta { font-size: 13px; color: #777; }
+.ipw-card-cta {
+    font-size: 15px; font-weight: bold; color: #fff !important;
+    background-color: teal; padding: 10px 10px; border-radius: 5px; text-decoration: none; white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); line-height: 1.5;
+}
+.ipw-card-cta:hover { background-color: teal; color: #fff !important; }
+
+/* One of these closes every skill section, so the spacing is tighter than the mini-exercise
+   pages, which only ever print a single "more tests" link at the very bottom. */
+.ipw-more-tests { display: flex; justify-content: center; margin: 20px 0px 0px; }
+.ipw-more-tests a {
+    font-size: 16px; font-weight: bold;
+    padding: 10px 16px;
+    border: 1px solid gray; border-radius: 5px; background-color: white;
+    text-decoration: none; text-align: center;
+}
+.ipw-more-tests a:hover { background-color: whitesmoke; }
+
+.ipw-comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.ipw-comment-section .comments-area {
+    max-width: 768px;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .ipw-title { font-size: 28px !important; }
+    .ipw-prose { font-size: 17px; }
+    .ipw-prose h2 { font-size: 22px !important; }
+    .ipw-section-heading { font-size: 22px !important; }
+    .ipw-card-cta { font-size: 13px; padding: 8px; }
+    /* Score tables are the widest thing in the prose; let them scroll instead of the page. */
+    .ipw-prose table { display: block; overflow-x: auto; white-space: nowrap; }
+}

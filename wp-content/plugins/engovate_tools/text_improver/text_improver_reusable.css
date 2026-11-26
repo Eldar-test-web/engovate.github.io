@@ -1,0 +1,21 @@
+.improvement-highlight {
+    cursor: pointer;
+    padding: 0px 2px;
+    border-radius: 3px;
+}
+
+.improvement-highlight.unhighlight {
+    background-color: transparent !important;
+    padding: 0px;
+}
+
+.highlight-improved-differences-button, .highlight-improved-differences-button:hover, .highlight-improved-differences-button:focus {
+    display: none;
+    margin-bottom: 20px;
+    background-color: darkorange;
+    font-size: 14px;
+}
+
+.highlight-improved-differences-button:disabled {
+    background-color: gray;
+}

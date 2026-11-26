@@ -1,0 +1,113 @@
+.payment-for-vietnamese-container {
+    width: 100%;
+    margin-bottom: 25px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.payment-for-vietnamese-container[hidden] {
+    display: none;
+}
+
+.payment-for-vietnamese-info-button {
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #1263a8;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none !important;
+    border: none;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+.payment-for-vietnamese-info-button div {
+    font-size: 13px;
+    font-style: italic;
+}
+
+.payment-for-vietnamese-info-button:hover, .payment-for-vietnamese-info-button:focus {
+    color: white;
+    background-color: #1573c4;
+}
+
+.payment-for-vietnamese-info-wrapper {
+    display: none;
+    margin-top: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#vietnamese-payment-email {
+    width: 100%;
+    max-width: 500px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;
+    color: black;
+    height: unset;
+}
+
+.vietnamese-payment-price-select {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vietnamese-payment-price {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 500px;
+}
+
+.vietnamese-payment-price.selected {
+    border: 1px solid black;
+    background-color: lightcyan;
+}
+
+.vietnamese-payment-price input {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+    .payment-for-vietnamese-info-button {
+        font-size: 16px;
+    }
+
+    .payment-for-vietnamese-info-button div {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .payment-for-vietnamese-info-button {
+        font-size: 13px;
+    }
+
+    .payment-for-vietnamese-info-button div {
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,225 @@
+.pronunciation-result-container {
+    position: relative;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.pronunciation-transcript-label {
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: underline;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.refined-pronunciation-transcript-label {
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: underline;
+    margin-bottom: 0px;
+    text-align: left;
+}
+
+.pronunciation-transcript, .refined-pronunciation-transcript {
+    text-align: left;
+}
+
+.refined-pronunciation-transcript-audio-speak {
+    text-align: left;
+}
+
+.refined-pronunciation-transcript-male-speak, .refined-pronunciation-transcript-female-speak {
+    font-size: 15px;
+    line-height: 1;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.refined-pronunciation-transcript-male-speak:hover, .refined-pronunciation-transcript-female-speak:hover {
+    border: 2px solid black;
+}
+
+.pronunciation-word {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 2.5;
+    min-width: 30px;
+    text-align: center;
+}
+
+.pronunciation-word-score {
+    position: absolute;
+    white-space: nowrap;
+    line-height: 1;
+    width: 100%;
+    left: 0px;
+    top: -2px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.unexpected-break {
+    color: darkmagenta;
+    text-decoration: line-through;
+    min-width: 15px;
+}
+
+.missing-break {
+    color: darkmagenta;
+    min-width: 15px;
+}
+
+.pronunciation-result-tips {
+    font-size: 14px;
+    color: rgb(50, 50, 50);
+    text-align: center;
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.pronunciation-detail-popup {
+    display: none;
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    pointer-events: auto;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.pronunciation-detail {
+    width: 350px;
+    max-height: 50vh;
+    overflow-y: auto;
+}
+
+.pronunciation-detail-popup-close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    padding: 0px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 18px;
+    color: black;
+    font-weight: bold;
+}
+
+.pronunciation-detail-popup table {
+    margin-bottom: 0px !important;
+}
+
+.word-accuracy-feedback {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.word-audio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.play-word-fast-audio-button, .play-word-slow-audio-button, .play-user-word-audio-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+    cursor: pointer;
+}
+
+.pronunciation-overall-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.pronunciation-overall-result div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    font-size: 12px;
+    border-radius: 50%;
+    background:
+        radial-gradient(closest-side, white 79%, transparent 80% 100%),
+        conic-gradient(gray 0%, lightgray 0);
+}
+
+.progress-title {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.metric-explanation {
+    position: absolute;
+    display: none;
+    top: -80px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    font-size: 12px;
+    min-width: 250px;
+    max-width: 400px;
+    text-align: center;
+    line-height: 2;
+}
+
+.metric-explanation-close-button {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    line-height: 1;
+    background-color: white;
+    padding: 0px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 13px;
+    color: black;
+    font-weight: bold;
+}

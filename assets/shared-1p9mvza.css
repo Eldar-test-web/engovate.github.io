@@ -1,0 +1,15 @@
+.hidden-element {display: none !important;}
+.post-template-default .content-area {border: 1px solid #d1d1d1 !important; border-radius: 5px !important; margin-top: 15px !important;}
+.post-template-default .widget-area {margin-top: 15px !important;}
+.post-template-default .widget-area {padding-left: 15px !important; margin-top: 15px !important;}
+.wp-block-post-template {padding: 0px !important}
+.sidebar-main .widget {padding: 15px; margin-bottom: 10px; border: 1px solid #d1d1d1; border-radius: 5px;}
+.wp-block-audio .wp-element-caption {text-align:center; font-style:italic;font-size:16px;margin-top:-15px}
+.round-border {
+	border-radius: 10px;
+}
+.ast-header-html-1 {
+	margin-top: 0px;
+}
+.faq-title {font-size:20px !important;font-weight:bold !important;}
+.faq-content {font-size: 18px !important;line-height:1.8;}

@@ -1,0 +1,450 @@
+.site-content .ast-container {
+    max-width: 100%;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+#main {
+    width: 100%;
+}
+
+.learn_video {
+    width: 100%;
+    padding: 0rem 3rem !important;
+}
+
+header {
+    margin-top: 20px;
+    margin-bottom: 10px !important;
+}
+
+h1 {
+    font-size: 1.2rem;
+}
+
+.ast-breadcrumbs-wrapper {
+    max-width: 100% !important;
+    padding: 0rem 3rem !important;
+}
+
+.main-row {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.left-column {
+    flex-basis: 68%;
+}
+
+.right-column {
+    position: relative;
+    flex-basis: 32%;
+}
+
+.mb-3 {
+    margin-bottom: 1rem;
+}
+
+hr {
+    border-top: 1px solid lightgray;
+    background-color: white;
+    margin: 0px;
+    width: 100%;
+}
+
+.responsive-embed {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+}
+
+#embeded-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#caption-text {
+    overflow: auto;
+    box-shadow: inset 0 0 0 1px lightgray;
+}
+
+.caption-line {
+    padding: 15px;
+    cursor: pointer;
+}
+
+.english-caption-line {
+    font-size: 1.1rem;
+}
+
+.caption-line.correct-dictation {
+    background-color: green;
+    color: white;
+}
+
+.caption-line.incorrect-dictation {
+    background-color: darkred;
+    color: white;
+}
+
+.caption-line.correct-dictation.disabled-dictation,
+.caption-line.incorrect-dictation.disabled-dictation {
+    background-color: inherit;
+    color: inherit;
+}
+
+.caption-line.highlighted,
+.caption-line.disabled-dictation.highlighted {
+    background-color: rgb(51, 51, 51);
+    color: white;
+}
+
+.word.highlighted {
+    background-color: rgb(235, 0, 0);
+}
+
+.caption-overlay {
+    position: absolute;
+    bottom: 10%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+    /* Allow click-through to the video */
+}
+
+.caption-line-overlay {
+    display: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.english-caption-line-overlay {
+    font-size: 1rem;
+}
+
+.relisten-caption-line-button,
+.next-caption-line-button,
+.previous-caption-line-button {
+    display: none;
+}
+
+.control-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    gap: 5px;
+    line-height: 1.6em;
+}
+
+.enable-dictation-toggle {
+    margin-right: auto;
+}
+
+.control-buttons label {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 14px;
+    user-select: none;
+}
+
+.box-english-caption-toggle {
+    margin-left: auto;
+}
+
+.control-buttons input {
+    pointer-events: none;
+}
+
+.control-buttons label:hover {
+    background-color: whitesmoke;
+}
+
+.resize-handle {
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-right: 4px solid lightgray;
+    position: relative;
+    text-align: center;
+}
+
+.resize-handle:hover {
+    border-right: 4px solid gray;
+}
+
+.resize-handle div {
+    position: absolute;
+    left: -8px;
+    border: 1px solid black;
+    background-color: white;
+    width: 22px;
+    height: 22px;
+    line-height: 22px;
+    color: rgb(33, 33, 33);
+    z-index: 9999;
+}
+
+.iframe-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+.caption-blocker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caption-blocker strong {
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.dictation-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 5px 0px 40px 0px;
+    gap: 5px;
+}
+
+.dictation-container.hidden {
+    display: none;
+}
+
+.dictation-container .dictation-hint {
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+    border: 2px dashed gray;
+    border-radius: 3px;
+}
+
+.dictation-container .dictation-tips {
+    font-style: italic;
+    font-size: 14px;
+    width: 100%;
+}
+
+.dictation-container .dictation-input {
+    padding: 20px;
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    width: 100%;
+    text-align: center;
+}
+
+.dictation-container .dictation-input:focus {
+    outline-color: gray !important;
+}
+
+.dictation-container .dictation-input.disabled {
+    background-color: rgb(235, 235, 235);
+    caret-color: rgba(0, 0, 0, 0);
+}
+
+/* For modern browsers */
+.dictation-container .dictation-input.disabled::placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+/* For Firefox */
+.dictation-container .dictation-input.disabled::-moz-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+/* For Internet Explorer and Edge */
+.dictation-container .dictation-input.disabled:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+/* For WebKit browsers (Safari, Chrome, Opera, etc) */
+.dictation-container .dictation-input.disabled::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0);
+}
+
+.dictation-container .relisten-dictation-button {
+    font-size: 16px;
+    background-color: rgb(74, 74, 74);
+}
+
+.dictation-container .check-dictation-button {
+    font-size: 16px;
+}
+
+.dictation-mode-wrapper {
+    margin-left: auto;
+}
+
+.dictation-mode-wrapper label {
+    font-size: 16px;
+}
+
+.dictation-mode-wrapper select {
+    padding: 2px 8px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+/* .auto-next-dictation-wrapper {
+    display: flex;
+    align-self: stretch;
+    align-items: center;
+    justify-items: center;
+}
+
+.dictation-container .auto-next-dictation-wrapper label {
+    margin-left: auto;
+    margin-right: 5px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 3px;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 14px;
+    user-select: none;
+}
+
+.dictation-container .auto-next-dictation-wrapper .auto-next-dictation-toggle input {
+    pointer-events: none;
+}
+
+.dictation-container .auto-next-dictation-wrapper .auto-next-dictation-toggle:hover {
+    background-color: whitesmoke;
+} */
+
+.dictation-container .previous-dictation-button {
+    margin-left: auto;
+    font-size: 16px;
+    background-color: rgb(0, 76, 255);
+}
+
+.dictation-container .next-dictation-button {
+    font-size: 16px;
+    background-color: rgb(0, 76, 255);
+}
+
+.dictation-container .next-dictation-button:disabled {
+    background-color: rgba(0, 76, 255, 0.5);
+}
+
+.dictation-container .check-dictation-result {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.dictation-container .correct-dictation-number {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.dictation-container .last-dictation-caption {
+    margin-top: 10px;
+}
+
+.dictation-container .last-dictation-answer,
+.dictation-container .last-dictation-caption {
+    font-size: 14px;
+    width: 100%;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.tooltip {
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    width: 100%;
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 921px) {
+    .main-row {
+        flex-direction: column;
+    }
+
+    .left-column,
+    .right-column {
+        flex: none;
+        width: 100%;
+    }
+
+    .resize-handle {
+        display: none;
+    }
+
+    .learn_video {
+        width: 100%;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+
+    .ast-container {
+        padding: 0px !important;
+    }
+
+    .ast-breadcrumbs-wrapper {
+        padding: 0px !important;
+    }
+
+    .control-buttons {
+        margin-bottom: 5px;
+        gap: 5px;
+    }
+
+    .control-buttons label,
+    .control-buttons select {
+        width: calc(50% - 2.5px);
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+}

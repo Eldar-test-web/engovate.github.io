@@ -1,0 +1,156 @@
+.fast-verification-popup-container {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.fast-verification-popup-wrapper {
+    position: relative;
+}
+
+.fast-verification-popup {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    max-width: 90vw;
+    max-height: 80vh;
+    padding: 20px;
+    position: relative;
+    border-radius: 5px;
+    overflow-y: auto;
+}
+
+.fast-verification-popup-reason {
+    color: red;
+    text-align: center;
+}
+
+.close-fast-verification-popup-button {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.close-fast-verification-popup-button:hover {
+    color: white;
+    background-color: red;
+}
+
+#fast-verification-form, #verification-confirm-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#verification-confirm-form {
+    display: none;
+}
+
+#fast-verification-form input, #verification-confirm-form input {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    line-height: 1;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+#fast-verification-form input:focus, #verification-confirm-form input:focus {
+    outline-color: black;
+}
+
+#fast-verification-form input:read-only, #verification-confirm-form input:read-only {
+    background-color: rgb(230, 230, 230);
+}
+
+#fast-verification-form button, #verification-confirm-form button {
+    margin-top: 5px;
+    font-size: 16px;
+    background-color: black;
+}
+
+#fast-verification-form button:disabled, #verification-confirm-form button:disabled {
+    background-color: darkgray;
+}
+
+#fast-verification-form a, #verification-confirm-form a {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.fast-verification-notice {
+    text-align: center;
+}
+
+.fast-verification-reminder {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+    width: 450px;
+    max-width: 80vw;
+}
+
+.google-fast-verification-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1b58ff !important;
+    gap: 10px;
+    font-size: 20px !important;
+    font-weight: bold;
+}
+
+.google-fast-verification-button:hover, .google-fast-verification-button:focus {
+    background-color: #0044ff !important;
+}
+
+.google-fast-verification-button i {
+    font-size: 22px;
+}
+
+.fast-verification-divider {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    line-height: 1.8;
+    color: rgb(80, 80, 80);
+}
+
+.fast-verification-divider span {
+    max-width: 80%;
+    text-align: center;
+}
+
+.fast-verification-divider::before,
+.fast-verification-divider::after {
+    flex: 1;
+    content: '';
+    padding: 1px;
+    background-color: lightgray;
+    margin: 5px;
+}

@@ -1,0 +1,91 @@
+/* IELTS Exam Topics — single (spoke) page */
+
+.iet-main {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.iet-title { font-size: 32px !important; line-height: 1.3; margin: 0 0 8px; }
+.iet-intro { font-size: 18px; color: #000; line-height: 1.6; margin: 0 0 22px; }
+
+.iet-section-heading { font-size: 26px !important; font-weight: bold; color: #000; line-height: 1.4; margin: 0 0 12px; }
+.iet-topics-list { list-style: none; margin: 0 0 26px; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.iet-topics-list li { font-size: 16px; line-height: 1.5; background-color: whitesmoke; padding: 8px 15px; border-radius: 5px; }
+
+.iet-empty { font-size: 16px; color: #777; padding: 18px 0; }
+
+/* ---- Test cards ---- */
+.iet-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 16px;
+}
+.iet-test-card {
+    position: relative;   /* anchors .post-locker */
+    display: flex; flex-direction: column;
+    border: 1px solid gray; border-radius: 5px;
+    padding: 15px; background-color: white;
+}
+
+/* Premium overlay — same markup and styling the skill archives use. */
+.post-locker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-locker i {
+    background-color: white;
+    border: 1px solid darkorange;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    color: darkorange;
+}
+.iet-test-card-name { display: block; font-weight: bold; font-size: 16px !important; color: #000; line-height: 1.35; margin: 0; flex: 1; }
+.iet-test-card-foot {
+    display: flex; align-items: center; justify-content: space-between; gap: 8px;
+    margin-top: auto; padding-top: 12px; border-top: 1px solid whitesmoke;
+}
+.iet-test-card-meta { font-size: 13px; color: #777; }
+.iet-test-card-cta {
+    font-size: 15px; font-weight: bold; color: #fff !important;
+    background-color: teal; padding: 10px 10px; border-radius: 5px; text-decoration: none; white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); line-height: 1.5;
+}
+.iet-test-card-cta:hover { background-color: teal; color: #fff !important; }
+
+/* ---- back to hub ---- */
+.iet-back-hub { margin: 30px 0 0; font-size: 15px; }
+
+/* ---- comments ---- */
+.iet-comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.iet-comment-section .comments-area {
+    max-width: 768px;
+    width: 100%;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .iet-title { font-size: 28px !important; }
+    .iet-section-heading { font-size: 22px !important; }
+    .iet-test-card-cta { font-size: 13px; padding: 8px; }
+}

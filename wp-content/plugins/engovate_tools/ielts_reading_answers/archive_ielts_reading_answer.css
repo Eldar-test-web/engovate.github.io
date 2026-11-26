@@ -1,0 +1,157 @@
+/* --- IELTS Reading Answers — archive listing --- */
+
+.ira-archive-wrap {
+    width: 100%;
+    margin: 30px 0;
+    padding: 0 16px;
+    box-sizing: border-box;
+    color: #000;
+    line-height: 1.6;
+    font-size: 18px !important;
+}
+
+.ira-archive-header {
+    text-align: center;
+    margin-bottom: 18px;
+    padding-bottom: 8px;
+}
+
+.ira-archive-header h1 {
+    margin: 0 0 6px !important;
+    font-size: 28px !important;
+    font-weight: bold;
+    color: #000 !important;
+    line-height: 1.3;
+}
+
+.ira-archive-header p {
+    margin: 0;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Search bar — text input + submit button, centered above the listing. */
+.ira-archive-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.ira-archive-search input[type="search"] {
+    width: 22rem;
+    padding: 6px 10px;
+    border: 1px solid lightgray;
+    background-color: white;
+    font-size: 18px;
+}
+
+.ira-archive-count {
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+.ira-archive-list {
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.ira-archive-item {
+    margin-bottom: 12px;
+}
+
+.ira-archive-link {
+    display: block;
+    position: relative;
+    padding: 14px 18px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-left: 4px solid rgb(224, 0, 0);
+    border-radius: 5px;
+    color: #000 !important;
+    text-decoration: none !important;
+    transition: background-color 0.15s, border-color 0.15s;
+}
+
+.ira-archive-link:hover {
+    background-color: #fff5f5;
+}
+
+.ira-archive-title {
+    margin: 0 0 4px !important;
+    font-size: 22px !important;
+    font-weight: bold;
+    color: rgb(224, 0, 0) !important;
+    line-height: 1.3;
+}
+
+.ira-archive-meta {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+
+.ira-archive-excerpt {
+    margin: 6px 0 0;
+    color: #000;
+    font-size: 15px;
+}
+
+/* Pagination — match the speaking-part archive's compact look. */
+.ira-archive-pagination {
+    margin-top: 24px;
+    text-align: right;
+}
+
+.ira-archive-pagination .page-numbers {
+    display: inline-block;
+    padding: 4px 12px;
+    margin: 0 2px;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    background-color: white;
+    color: #000 !important;
+    font-size: 15px;
+    text-decoration: none !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.ira-archive-pagination .page-numbers.current {
+    background-color: rgb(224, 0, 0);
+    border-color: rgb(224, 0, 0);
+    color: white !important;
+}
+
+.ira-archive-pagination .page-numbers:hover {
+    background-color: #fff5f5;
+}
+
+.ira-archive-pagination .page-numbers.current:hover {
+    background-color: rgb(180, 0, 0);
+}
+
+.ira-archive-empty {
+    color: #555;
+    font-style: italic;
+    text-align: center;
+    padding: 30px 0;
+}
+
+@media screen and (max-width: 768px) {
+    .ira-archive-search {
+        gap: 5px;
+    }
+
+    .ira-archive-search input[type="search"] {
+        width: 100%;
+    }
+
+    .ira-archive-search button {
+        width: 100%;
+    }
+}

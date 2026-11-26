@@ -1,0 +1,1949 @@
+#ast-desktop-header, #ast-mobile-header {
+    display: none !important;
+}
+
+#main {
+    width: 100%;
+}
+
+h1 {
+    font-size: 22px !important;
+}
+
+h2 {
+    font-size: 22px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+h3 {
+    font-size: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+h4 {
+    font-size: 18px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+p {
+    margin-bottom: 15px !important;
+}
+
+.ielts-listening-transcript-subhead {
+    margin: 18px 0 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+html, body {
+    height: 100%;
+    font-size: 18px !important;
+}
+
+#page {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+.entry-content {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.custom-breadcrumb {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.ielts-test-category-info {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px 20px;
+    line-height: 1.6;
+    max-width: 768px;
+    margin-top: 20px;
+}
+
+.ielts-test-category-info h3 {
+    margin-bottom: 10px;
+}
+
+.site-content .ast-container {
+    max-width: 100%;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.ielts-listening-test-container {
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.ielts-listening-page-content {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 10px auto;
+    grid-template-rows: auto 1fr;
+}
+
+.ielts-listening-page-content.question-only {
+    grid-template-columns: 100%;
+}
+
+.ielts-listening-bottom-panel {
+    position: relative;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.ielts-listening-comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.ielts-listening-part-announcement-container {
+    grid-row: 1;
+    grid-column: 1 / -1;
+    padding: 2px 15px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    line-height: 1.5;
+}
+
+.ielts-listening-test-transcripts {
+    grid-row: 2;
+    max-height: 100%;
+    padding: 20px !important;
+    overflow-y: scroll;
+    position: relative; /*add this allow the position the note button to be set correctly */
+}
+
+.ielts-listening-test-transcripts.question-only {
+    display: none;
+}
+
+.ielts-listening-question-container {
+    grid-row: 2;
+    max-height: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+    position: relative; /*add this allow the position the note button to be set correctly */
+}
+
+.ielts-listening-resize-handle {
+    grid-row: 2;
+    max-height: 100%;
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-left: 1px solid gray;
+    position: relative;
+    text-align: center;
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.ielts-listening-resize-handle.question-only {
+    display: none;
+}
+
+.ielts-listening-test-transcripts::-webkit-scrollbar, .ielts-listening-question-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.ielts-listening-test-transcripts::-webkit-scrollbar-track, .ielts-listening-question-container::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+.ielts-listening-test-transcripts::-webkit-scrollbar-thumb, .ielts-listening-question-container::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+}
+
+.ielts-listening-test-transcripts::-webkit-scrollbar-thumb:hover, .ielts-listening-question-container::-webkit-scrollbar-thumb:hover {
+    background-color: gray; /* Change the thumb color when hovering */
+}
+
+.ielts-listening-resize-handle:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.ielts-listening-resize-handle div {
+    position: absolute;
+    left: -12px;
+    border: 1px solid black;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: rgb(33, 33, 33);
+}
+
+.ielts-listening-page-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: rgb(255, 241, 241);
+}
+
+.ielts-listening-page-header h1 {
+    grid-column: 2;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.ielts-listening-header-export-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ielts-listening-export-pdf-header-btn {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(70, 70, 70) !important;
+    outline: none !important;
+    font-size: 14px;
+    padding: 5px 7px;
+    border: 1px solid lightgray;
+    line-height: 1;
+}
+
+.ielts-listening-site-header {
+    width: 100%;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-logo {
+    max-width: 35px;
+}
+
+.ielts-listening-test-extra-info {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.ielts-listening-timer {
+    font-size: 16px;
+}
+
+.ielts-listening-band-score {
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.ielts-listening-focus-mode-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ielts-listening-header-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ielts-listening-test-audio {
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+}
+
+.ielts-listening-part-announcement {
+    display: none;
+    font-size: 16px;
+}
+
+.ielts-listening-part-announcement.current {
+    display: block;
+}
+
+/* Until a part's audio first plays: outline the player and say what to do. */
+.ielts-listening-audio-hint {
+    display: none;
+    margin-top: 6px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    background: #e8f0fe;
+    color: #174ea6;
+    font-size: 13px;
+    font-weight: 700;
+}
+.ielts-listening-part-announcement.is-waiting .ielts-listening-audio-hint {
+    display: inline-block;
+}
+.ielts-listening-part-announcement.is-waiting .ielts-listening-test-audio {
+    border-radius: 18px;
+    animation: ielts-listening-audio-pulse 1.6s ease-in-out infinite;
+}
+@keyframes ielts-listening-audio-pulse {
+    0%, 100% { box-shadow: 0 0 0 2px #1a73e8; }
+    50%      { box-shadow: 0 0 0 5px rgba(26, 115, 232, 0.35); }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ielts-listening-part-announcement.is-waiting .ielts-listening-test-audio {
+        animation: none;
+        box-shadow: 0 0 0 2px #1a73e8;
+    }
+}
+
+.ielts-listening-transcript {
+    display: none;
+    margin-bottom: 4rem;
+}
+
+.ielts-listening-transcript.current {
+    display: block;
+}
+
+/* Click-to-play sentence in transcript (review mode). Subtle hover
+   underline + cursor change makes the feature discoverable without
+   making the transcript feel busy. */
+.ielts-listening-sentence[data-start] {
+    cursor: pointer;
+    border-radius: 2px;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.ielts-listening-sentence[data-start]:hover {
+    background-color: rgba(33, 150, 243, 0.10);
+    box-shadow: 0 0 0 2px rgba(33, 150, 243, 0.10);
+}
+/* Sentence currently being played by the audio. Slightly stronger tint
+   than hover so the active line stands out while playback advances. */
+.ielts-listening-sentence[data-start].playing {
+    background-color: rgba(255, 193, 7, 0.25);
+    box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.25);
+}
+/* While playing, suppress the explanation/note highlight backgrounds inside
+   the active sentence so the amber playing tint isn't covered by their solid
+   colors. Highlights return as soon as playback moves to the next sentence. */
+.ielts-listening-sentence[data-start].playing .explanation-highlight,
+.ielts-listening-sentence[data-start].playing .note-highlight {
+    background-color: transparent;
+}
+
+.ielts-listening-question-control-buttons {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    z-index: 9999;
+}
+
+#ielts-listening-next-question-button, #ielts-listening-previous-question-button {
+    font-size: 14px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#ielts-listening-next-question-button:disabled, #ielts-listening-previous-question-button:disabled {
+    background-color: darkgray;
+}
+
+.ielts-listening-test-form {
+    width: 100%;
+}
+
+.ielts-listening-question-sections {
+    margin-bottom: 3rem;
+}
+
+.ielts-listening-question-section.current {
+    display: block;
+}
+
+.ielts-listening-question-section {
+    display: none;
+}
+
+.ielts-listening-questions {
+    margin-bottom: 4rem;
+}
+
+.ielts-listening-question-item {
+    margin-bottom: 1.5rem;
+}
+
+.ielts-listening-question-number {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 2px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin-right: 2px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+.ielts-listening-question-number.correct {
+    background-color: green;
+    color: white;
+}
+
+.ielts-listening-question-number.incorrect {
+    background-color: darkred;
+    color: white;
+}
+
+.ielts-listening-option-letter {
+    background-color: rgb(225, 224, 224);
+    display: inline-block;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    margin-right: 10px;
+    margin-left: 20px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.ielts-listening-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.ielts-listening-question-item input[type="radio"],
+.ielts-listening-question-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
+}
+
+.ielts-listening-question-item input[type="text"] {
+    padding: 0px 10px;
+    line-height: 1.5;
+    width: 8rem;
+    background-color: white;
+    border-color: gray;
+    color: black;
+}
+
+.ielts-listening-question-item select {
+    padding: 2px;
+    line-height: 1.5;
+    margin-left: 5px;
+    width: 8rem;
+    background-color: white;
+    border-color: gray;
+    color: black;
+}
+
+.dnd-panel {
+    margin-top: 10px;
+    margin-bottom: 1.5rem;
+    padding: 10px 12px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+.dnd-panel-instruction {
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.dnd-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.dnd-card {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    touch-action: none;
+    transition: opacity 0.15s;
+    line-height: 1.5;
+    font-size: 17px;
+}
+
+.dnd-zone[draggable="true"] {
+    touch-action: none;
+}
+
+.dnd-card:active {
+    cursor: grabbing;
+}
+
+.dnd-label {
+    min-width: 20px;
+    flex-shrink: 0;
+    font-size: 15px;
+}
+
+.dnd-text {
+    font-weight: 600;
+}
+
+.dnd-panel--inline .dnd-cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.dnd-panel--inline .dnd-card {
+    padding: 2px 10px;
+    gap: 2px;
+}
+
+/* Side-by-side layout for matching DnD: questions wrapped in .matching-dnd-questions, panel beside it */
+.ielts-listening-questions:has(> .matching-dnd-questions) {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.matching-dnd-questions {
+    min-width: 30%;
+    max-width: 60%;
+}
+
+.dnd-panel--matching {
+    margin-top: 0px;
+    max-width: 40%;
+}
+
+.matching-dnd-questions .options-drop-zone {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.dnd-card-used {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.dnd-card-dragging {
+    opacity: 0.5;
+}
+
+.dnd-card-selected {
+    background-color: #e8f0fe;
+    border-color: #4285f4;
+    outline: 2px solid #4285f4;
+}
+
+.dnd-zone {
+    margin-bottom: 5px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.15s, border-color 0.15s;
+    background-color: white;
+}
+
+.options-drop-zone {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    vertical-align: middle;
+    margin-left: 4px;
+    margin-right: 4px;
+    border: 1px dashed gray;
+}
+
+.dnd-drop-placeholder {
+    font-style: italic;
+    font-size: 11px;
+    color: rgb(80, 80, 80);
+    line-height: 1.5;
+}
+
+.dnd-drop-value {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.dnd-zone.dnd-drop-zone-over {
+    background-color: #e8f0fe;
+    border-color: #4285f4;
+}
+
+.dnd-zone.dnd-drop-zone-filled {
+    border-color: #4285f4;
+    cursor: grab;
+    border-style: solid;
+}
+
+.dnd-zone.dnd-drop-zone-filled:active {
+    cursor: grabbing;
+}
+
+.ielts-listening-matching-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.ielts-listening-matching-table thead th {
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 4px;
+    border: 1px solid #bbb;
+    background-color: #f0f0f0;
+    font-size: 16px;
+}
+
+.ielts-listening-matching-table .ielts-listening-question-item {
+    border-bottom: 1px solid #bbb;
+}
+
+.ielts-listening-matching-question-cell {
+    padding: 8px 10px;
+    line-height: 1.5;
+    vertical-align: middle;
+    border: 1px solid #bbb;
+}
+
+.ielts-listening-matching-option-cell {
+    text-align: center;
+    vertical-align: middle;
+    padding: 8px 10px;
+    border: 1px solid #bbb;
+}
+
+.ielts-listening-matching-option-cell input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.ielts-listening-section-content-wrapper {
+    border-color: lightgray;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.ielts-listening-question-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-section.current {
+    border: 1px solid lightpink;
+    pointer-events: none;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-section.current .ielts-listening-palette-section-question-count {
+    display: none;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-item {
+    display: none;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-section.current .ielts-listening-palette-item {
+    display: inline-block;
+    pointer-events: auto;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-item a.completed {
+    background-color: gray;
+    color: white;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-item a.correct {
+    background-color: green;
+    color: white;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-item a.incorrect {
+    background-color: darkred;
+    color: white;
+}
+
+.ielts-listening-question-palette .ielts-listening-palette-item a {
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
+
+.ielts-listening-question-section-content:has(img) {
+    display: inline-block;
+    max-width: calc(60%);
+    margin-bottom: 4rem;
+    vertical-align: top;
+}
+
+.ielts-listening-question-section-content:has(img) + .ielts-listening-questions {
+    display: inline-block;
+    max-width: calc(40% - 30px);
+    margin-top: 5rem;
+    vertical-align: top;
+}
+
+.ielts-listening-question-section-content img {
+    width: auto;
+    max-height: 600px !important;
+}
+
+.ielts-listening-result-overlay-content, .ielts-listening-preview-overlay-content {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 80vw;
+    max-height: 80vh;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.ielts-listening-preview-overlay, .ielts-listening-result-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+
+.ielts-listening-preview-overlay.completed, .ielts-listening-result-overlay.completed {
+    display: flex;
+}
+
+.ielts-listening-preview-table-wrapper, .ielts-listening-result-table-wrapper {
+    flex: 0 1 auto;
+    min-width: 50vw;
+    max-height: 55vh;
+    min-height: 0;
+    overflow-y: auto;
+}
+
+#ielts-listening-preview-close-button, #ielts-listening-result-close-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+}
+
+.ielts-listening-result-info {
+    flex-shrink: 0;
+}
+
+.ielts-listening-premium-cta {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-shrink: 0;
+    gap: 12px;
+    max-width: 100%;
+    margin: 12px 0;
+    padding: 11px 15px;
+    border: 1px solid #f0c14b;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #fffdf5 0%, #fff6e0 100%);
+    text-align: left;
+    box-sizing: border-box;
+}
+.ielts-listening-premium-cta-text {
+    flex: 1 1 240px;
+    min-width: 0;
+}
+.ielts-listening-premium-cta-headline {
+    display: block;
+    font-weight: 700;
+    font-size: 18px;
+    color: #4a3a00;
+    line-height: 1.5;
+}
+.ielts-listening-premium-cta-features {
+    display: block;
+    margin-top: 2px;
+    font-size: 15px;
+    color: #4a4020;
+    line-height: 1.5;
+    font-style: italic;
+}
+.ielts-listening-premium-cta-button {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 15px;
+    border-radius: 6px;
+    background: #d4a017;
+    color: #fff !important;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+    white-space: nowrap;
+    line-height: 1.5;
+}
+.ielts-listening-premium-cta-button:hover {
+    background: #b8860b;
+}
+
+.ielts-listening-premium-cta-promo {
+    flex-shrink: 0;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 12px auto;
+}
+
+.ielts-listening-premium-cta-promo .affiliate-promo > div {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ielts-listening-premium-cta-close {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    background-color: white;
+    padding: 1px 10px;
+    border: 1px solid gray;
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.ielts-listening-premium-cta-close:hover, .ielts-listening-premium-cta-close:focus {
+    background-color: whitesmoke;
+    border-color: gray;
+    color: black;
+}
+
+.correct-ielts-listening-answer {
+    background-color: rgb(210, 255, 210);
+}
+
+.incorrect-ielts-listening-answer {
+    background-color: rgb(255, 215, 215);
+}
+
+.correct-answer-info {
+    color: black;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.explain-answer-button {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 0px 10px;
+    line-height: 2;
+    color: #2f5aa3;
+    background-color: #eef4fd;
+    border: 1px solid #c9def6;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.explain-answer-button:hover {
+    background-color: #e1ebfb;
+    border: 1px solid #a8c8ef;
+}
+
+.explain-answer-button.locked,
+.explain-answer-button.locked:hover {
+    color: #6c757d;
+    background-color: rgba(108, 117, 125, 0.08);
+    border-color: rgba(108, 117, 125, 0.28);
+}
+
+.answer-detailed-explanation-popup {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border: 1px solid #c9def6;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    background-color: white;
+    max-width: 80vw;
+}
+
+.answer-detailed-explanation-popup .notice {
+    font-size: 13px;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.answer-detailed-explanation-popup .detailed-explanation {
+    font-size: 16px;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+.answer-detailed-explanation-popup .detailed-explanation strong {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.trap-answer-button {
+    display: inline-block;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 0px 10px;
+    line-height: 2;
+    color: #96751a;
+    background-color: #fdf6e6;
+    border: 1px solid #eddaa8;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.trap-answer-button:hover {
+    background-color: #fbeeca;
+    border: 1px solid #e4cd8f;
+}
+
+.trap-answer-button.locked,
+.trap-answer-button.locked:hover {
+    color: #6c757d;
+    background-color: rgba(108, 117, 125, 0.08);
+    border-color: rgba(108, 117, 125, 0.28);
+}
+
+.answer-trap-popup {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    border: 1px solid #eddaa8;
+    border-radius: 10px;
+    padding: 10px 15px 10px 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    background-color: white;
+    max-width: 80vw;
+}
+
+.answer-trap-popup .notice {
+    font-size: 13px;
+    line-height: 1.6;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.answer-trap-popup .trap-content {
+    font-size: 16px;
+    line-height: 2;
+    white-space: pre-line;
+}
+
+.answer-trap-popup .trap-content strong {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.ielts-listening-test-control-buttons {
+    position: absolute;
+    top: -40px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.ielts-listening-submit-button {
+    font-size: 14px;
+    background-color: green;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ielts-listening-submit-button:hover {
+    background-color: #33b249;
+}
+
+.ielts-listening-submit-button.locked, .ielts-listening-submit-button.locked:focus {
+    background-color: #d35400;
+}
+
+.ielts-listening-submit-button.locked:hover {
+    background-color: #e65c00;
+}
+
+.ielts-listening-review-button, .ielts-listening-review-button:focus {
+    font-size: 14px;
+    background-color: #1a73e8;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ielts-listening-review-button:hover {
+    background-color: #1558b0;
+}
+
+.note-highlight {
+    background-color: yellow;
+}
+
+.explanation-highlight {
+    background-color: aquamarine;
+}
+
+.ielts-listening-explanation-number {
+    border: 1px solid black;
+    border-radius: 2px;
+    font-size: 18px;
+    padding: 0px 5px;
+    margin: 0px 1px;
+    background-color: white;
+}
+
+#ielts-listening-highlight-popup {
+    display: none;
+    position: absolute;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    background-color: white;
+    padding: 2px 5px;
+    z-index: 1000;
+}
+
+/* Larger, easier tap targets for the highlight popup on touch devices (iPad/iPhone/Android) */
+@media (pointer: coarse) {
+    #ielts-listening-highlight-popup {
+        padding: 4px 6px;
+    }
+
+    #ielts-listening-highlight-popup button {
+        font-size: 22px;
+        padding: 10px 14px;
+    }
+}
+
+.ielts-listening-small-note-section {
+    display: none;
+    position: absolute;
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 3px;
+    z-index: 11;
+    width: 200px;
+    height: 200px;
+}
+
+.ielts-listening-small-note-content {
+    padding: 5px;
+    font-size: 16px;
+    height: 90%;
+    overflow-y: auto;
+    background-color: rgb(255, 255, 131);
+}
+
+.ielts-listening-delete-note-button {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 3px;
+    color: red;
+    position: absolute;
+    bottom: 1px;
+    right: 1px;
+    font-size: 10px;
+}
+
+.ielts-listening-close-note-button {
+    background-color: white;
+    border: 1px solid gray;
+    color: black;
+    padding: 2px 5px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    font-size: 12px;
+}
+
+.ielts-listening-small-note-button {
+    position: absolute;
+    padding: 2px;
+    width: 21px;
+    height: 21px;
+    font-size: 14px;
+    background-color: gold;
+    z-index: 10;
+    color: black;
+}
+
+#ielts-listening-highlight-button {
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding: 5px;
+    color: darkorange;
+}
+
+#ielts-listening-dehighlight-button {
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding: 5px;
+    color: black;
+
+}
+
+#ielts-listening-note-button {
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding: 5px;
+    color: black;
+}
+
+#ielts-listening-focus-mode-button {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+    font-size: 16px;
+    padding: 5px 7px;
+    border: 1px solid lightgray;
+    line-height: 1;
+}
+
+#ielts-listening-dropdown-button {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    font-size: 25px;
+    padding: 0px;
+}
+
+.ielts-listening-dropdown-menu {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+}
+
+.ielts-listening-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    right: 0px;
+    top: 30px;
+    white-space: nowrap;
+}
+
+.ielts-listening-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.ielts-listening-dropdown-content a:hover {
+    background-color: whitesmoke;
+}
+
+.ielts-listening-focus-mode {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9 !important;
+    background: white !important;
+}
+
+.ielts-listening-control-tip {
+    font-size: 13px;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.ielts-listening-end-of-test-content {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: rgb(255, 241, 241);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* since now we have practice this section only and also the ability to click each sentence, this is no longer meaningful. Hide it for now */
+.ielts-listening-section-start-time-button {
+    display: none;
+    font-size: 14px;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border: 1px solid lightgray;
+    padding: 10px;
+    color: black;
+}
+
+.ielts-listening-full-test-link, .ielts-listening-full-test-link:focus {
+    text-decoration: underline;
+}
+
+.ielts-listening-question-section-heading {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ielts-listening-practice-section-button, .ielts-listening-practice-section-button:focus {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 7px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 1.5;
+    color: #0d6efd;
+    background: rgba(13, 110, 253, 0.08);
+    border: 1px solid rgba(13, 110, 253, 0.28);
+    border-radius: 4px;
+    text-decoration: none;
+    outline: none;
+}
+
+.ielts-listening-practice-section-button:hover {
+    background: rgba(0, 102, 255, 0.211);
+    color: #0d6efd;
+}
+
+.ielts-listening-practice-section-button.locked,
+.ielts-listening-practice-section-button.locked:focus,
+.ielts-listening-practice-section-button.locked:hover {
+    color: #6c757d;
+    background: rgba(108, 117, 125, 0.08);
+    border-color: rgba(108, 117, 125, 0.28);
+    cursor: pointer;
+}
+
+.ielts-listening-section-practice-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    padding: 8px 12px;
+    background: #fff8e6;
+    border: 1px solid #f0d98c;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.ielts-listening-play-full-part-button, .ielts-listening-play-full-part-button:focus {
+    flex: none;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: black;
+    background: #fff;
+    border: 1px solid #d9bf6a;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ielts-listening-play-full-part-button:hover {
+    background: #fffdf7;
+    color: black;
+    border: 1px solid #d9bf6a;
+}
+
+/* Section practice: collapse transcript paragraphs that don't hold this
+   section's evidence (review mode); the "Play full part" button reveals them
+   by adding .show-full-transcript. */
+.ielts-listening-transcript-collapsed {
+    display: none;
+}
+
+.ielts-listening-transcript.show-full-transcript .ielts-listening-transcript-collapsed {
+    display: revert;
+}
+
+.ielts-submit-reminder-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.ielts-submit-reminder-popup {
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    padding: 25px 30px;
+    width: 360px;
+    max-width: 90vw;
+    text-align: center;
+}
+
+.ielts-submit-reminder-message {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.ielts-submit-reminder-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ielts-submit-reminder-continue, .ielts-submit-reminder-continue:focus {
+    font-size: 14px;
+    background-color: #1a73e8;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ielts-submit-reminder-continue:hover {
+    background-color: #1558b0;
+}
+
+.ielts-submit-reminder-submit, .ielts-submit-reminder-submit:focus {
+    font-size: 14px;
+    background-color: green;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.ielts-submit-reminder-submit:hover {
+    background-color: #33b249;
+}
+
+.ielts-review-mode-banner {
+    background-color: lightcyan;
+    border: 1px solid #7fbfc7;
+    border-radius: 5px;
+    padding: 12px 18px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #222;
+    text-align: center;
+}
+
+.ielts-review-mode-export {
+    margin-top: 10px;
+}
+
+.ielts-review-mode-exit {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.ielts-review-mode-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 9999;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+}
+
+.spinner-overlay strong {
+    color: white;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.spinner {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ielts-listening-print-container {
+    display: none;
+}
+
+@media print {
+    @page {
+        margin: 1.5cm 2cm;
+        size: A4;
+    }
+
+    .custom-breadcrumb,
+    .ielts-online-test-tag,
+    .site-logo,
+    #wpadminbar,
+    .announcement-bar,
+    .site-footer,
+    .ielts-listening-site-header,
+    .ielts-listening-bottom-panel,
+    .ielts-listening-resize-handle,
+    .ielts-listening-part-announcement-container,
+    .ielts-listening-test-transcripts,
+    .ielts-listening-result-overlay,
+    .ielts-listening-preview-overlay,
+    #ielts-listening-highlight-popup,
+    .spinner-overlay,
+    .ielts-listening-end-of-test-content,
+    .ielts-listening-comment-section,
+    .entry-content,
+    .ielts-listening-section-start-time-button,
+    .payment-popup-container,
+    .fast-verification-popup-container,
+    .ielts-listening-export-pdf-link,
+    .ielts-listening-test-container,
+    .explain-answer-button,
+    .trap-answer-button,
+    .ielts-listening-practice-section-button {
+        display: none !important;
+    }
+
+    html, body {
+        font-size: 11pt !important;
+        background: white !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    #page, .site-content, #primary, #main, .ast-container {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    .ielts-listening-page-header {
+        background: transparent !important;
+        border-bottom: 1.5pt dashed #333;
+        padding-bottom: 10pt;
+        margin-bottom: 20pt;
+    }
+
+    .ielts-listening-print-hidden {
+        display: none !important;
+    }
+
+    .ielts-listening-print-container {
+        display: block;
+    }
+
+    .ielts-listening-print-container .ielts-listening-question-section {
+        display: block !important;
+        page-break-before: always;
+        margin-bottom: 30pt;
+    }
+
+    .ielts-listening-print-container .ielts-listening-question-section:first-child,
+    .ielts-listening-print-container .ielts-print-result-summary + .ielts-listening-question-section {
+        page-break-before: auto;
+    }
+
+    .ielts-listening-print-audio-link {
+        margin-top: 10pt;
+        margin-bottom: 10pt;
+        padding: 6pt 10pt;
+        border: 1pt solid #ccc;
+        border-radius: 4pt;
+        font-size: 10pt;
+        color: #333;
+    }
+
+    .ielts-listening-print-audio-link a {
+        color: #1a0dab;
+        word-break: break-all;
+    }
+
+    .print-part-label {
+        font-size: 13pt;
+        font-weight: bold;
+        letter-spacing: 0.5pt;
+        text-transform: uppercase;
+        border-bottom: 1.5pt solid #333;
+        padding-bottom: 6pt;
+        margin-top: 10pt;
+        margin-bottom: 15pt;
+    }
+
+    input[type="text"] {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        border: none !important;
+        border-bottom: 1pt solid #333 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        min-width: 80pt !important;
+        color: #000 !important;
+        padding: 0 2pt !important;
+    }
+
+    input[type="radio"] {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        width: 10pt !important;
+        height: 10pt !important;
+        border: 1.5pt solid #333 !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
+        flex-shrink: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    input[type="radio"]:checked {
+        background-color: #333 !important;
+        box-shadow: inset 0 0 0 2pt white !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    input[type="checkbox"] {
+        -webkit-appearance: none !important;
+        appearance: none !important;
+        width: 10pt !important;
+        height: 10pt !important;
+        border: 1.5pt solid #333 !important;
+        border-radius: 2pt !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        display: inline-block !important;
+        vertical-align: middle !important;
+        flex-shrink: 0 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    input[type="checkbox"]:checked {
+        background-color: #333 !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .ielts-print-result-summary {
+        display: flex;
+        align-items: center;
+        gap: 24pt;
+        padding: 8pt 0 12pt;
+        border-bottom: 1pt solid #ccc;
+        margin-bottom: 16pt;
+    }
+
+    .ielts-print-band-score {
+        font-size: 16pt;
+        font-weight: bold;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .ielts-print-time-taken {
+        font-size: 12pt;
+        color: #444;
+    }
+
+    .ielts-print-select-value {
+        display: inline-block;
+        min-width: 80pt;
+        border-bottom: 1pt solid #333;
+        padding: 0 2pt;
+        font-weight: bold;
+    }
+
+    .ielts-print-select-empty {
+        display: inline-block;
+        min-width: 80pt;
+        border-bottom: 1pt solid #333;
+        padding: 0 2pt;
+    }
+
+    .ielts-listening-option-letter {
+        background-color: #eee !important;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .ielts-listening-questions {
+        margin-bottom: 20pt !important;
+    }
+
+    .ielts-listening-question-item {
+        margin-bottom: 12pt !important;
+    }
+
+    .ielts-listening-print-transcripts {
+        page-break-before: always;
+        padding-top: 10pt;
+    }
+
+    .ielts-listening-print-section-heading {
+        font-size: 16pt !important;
+        border-bottom: 1.5pt solid #333;
+        padding-bottom: 8pt;
+        margin-bottom: 15pt !important;
+    }
+
+    .ielts-listening-print-transcript-heading {
+        font-size: 13pt !important;
+        font-weight: bold;
+        margin-top: 20pt !important;
+        margin-bottom: 8pt !important;
+    }
+
+    .ielts-listening-print-transcripts .ielts-listening-transcript {
+        display: block !important;
+        margin-bottom: 10pt;
+        line-height: 1.6;
+        font-size: 10pt;
+    }
+
+    .ielts-listening-print-answer-key {
+        page-break-before: always;
+        padding-top: 20pt;
+    }
+
+    .ielts-listening-print-answer-key h2 {
+        font-size: 16pt;
+        margin-bottom: 15pt;
+        border-bottom: 1.5pt solid #333;
+        padding-bottom: 8pt;
+    }
+
+    .ielts-listening-answer-key-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10pt;
+    }
+
+    .ielts-listening-answer-key-table th,
+    .ielts-listening-answer-key-table td {
+        border: 1pt solid #ccc;
+        padding: 5pt 8pt;
+        text-align: left;
+        vertical-align: top;
+    }
+
+    .ielts-listening-answer-key-table th {
+        background-color: #f5f5f5;
+        font-weight: bold;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .ielts-listening-answer-key-table td:first-child {
+        width: 25pt;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .ielts-listening-answer-key-table td:nth-child(2) {
+        width: 100pt;
+        font-weight: bold;
+    }
+
+    /* --- DRAG AND DROP (print) --- */
+    .dnd-zone {
+        border: none;
+        background: none;
+        cursor: default;
+        display: inline-flex;
+        padding: 2pt 0;
+        border-bottom: 1pt solid #333;
+        min-width: 120pt;
+    }
+
+    .dnd-zone.dnd-drop-zone-filled {
+        border-bottom: none;
+    }
+
+    .dnd-drop-placeholder {
+        display: none !important;
+    }
+
+    .dnd-panel {
+        border: none;
+        background: none;
+        padding: 0;
+        margin-bottom: 8pt;
+    }
+
+    .dnd-panel-instruction {
+        display: none;
+    }
+
+    .dnd-card {
+        border: none;
+        padding: 1pt 0;
+        cursor: default;
+        gap: 4pt;
+    }
+
+    .dnd-card-used {
+        opacity: 1;
+    }
+
+    .dnd-drop-value {
+        border-bottom: 1pt solid #333;
+        min-width: 40pt;
+    }
+
+    /* Stack the matching DnD layout vertically — side-by-side doesn't fit a PDF page */
+    .ielts-listening-questions:has(> .matching-dnd-questions) {
+        display: block;
+    }
+
+    .matching-dnd-questions,
+    .dnd-panel--matching {
+        max-width: 100%;
+        width: 100%;
+        min-width: 0;
+    }
+
+    /* When a questions container has a matching table, put it on its own line at full width */
+    .ielts-listening-print-container .ielts-listening-question-section-content:has(+ .ielts-listening-questions .ielts-listening-matching-table) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .ielts-listening-print-container .ielts-listening-questions:has(.ielts-listening-matching-table) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ielts-listening-page-content {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .ielts-listening-test-transcripts {
+        grid-column: 1 / -1;
+    }
+
+    .ielts-listening-resize-handle {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        height: 1px;
+        background-color: black;
+        width: 100%;
+    }
+    
+    .ielts-listening-question-container {
+        grid-column: 1 / -1;
+        grid-row: 4;
+    }
+
+    .ielts-listening-resize-handle div {
+        display: none;
+    }
+
+    .ielts-listening-site-header {
+        padding: 5px 0px;
+    }
+
+    .ielts-listening-part-announcement-container {
+        margin: 0px 15px;
+    }
+    
+    .ielts-listening-part-question-count {
+        display: none;
+    }
+
+    .ielts-listening-question-palette .ielts-listening-palette-section {
+        display: none;
+    }
+
+    .ielts-listening-question-palette .ielts-listening-palette-section.current {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ielts-listening-question-palette .ielts-listening-palette-section-part {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 0px 5px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    .ielts-listening-question-palette .ielts-listening-palette-item a {
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 14px;
+    }
+
+    .ielts-listening-part-announcement.current {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 5px;
+    }
+    /* Its own line, so the player keeps its full width. */
+    .ielts-listening-audio-hint {
+        flex-basis: 100%;
+        margin-top: 0;
+    }
+
+    .ielts-listening-question-section-content:has(img) {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .ielts-listening-question-section-content:has(img) + .ielts-listening-questions {
+        display: block;
+        max-width: 100%;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .ielts-listening-test-audio {
+        flex: 1;
+        height: 35px;
+        margin-top: 0px;
+    }
+
+    .ielts-listening-questions:has(> .matching-dnd-questions) {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .matching-dnd-questions {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .dnd-panel--matching {
+        max-width: 100%;
+        width: 100%;
+    }
+}

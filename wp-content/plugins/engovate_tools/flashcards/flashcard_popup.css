@@ -1,0 +1,233 @@
+/* The small button that appears next to selected text. */
+#text-selection-popup {
+    display: none;
+    position: absolute;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0px;
+    z-index: 998;
+    line-height: 1;
+}
+
+#flashcard-button {
+    color: black;
+    background-color: white;
+    border: 1px solid gray;
+    font-size: 18px;
+    padding: 5px;
+}
+
+#flashcard-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* The white card. Sized by content rather than by viewport width, so it does not stretch across a
+   desktop screen or crush on a phone. */
+#flashcard-popup-wrapper {
+    position: relative;
+    background-color: white;
+    width: 100%;
+    max-width: 460px;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 24px;
+    border-radius: 5px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    box-sizing: border-box;
+}
+
+#flashcard-popup h3,
+#flashcard-premium-required h3 {
+    margin: 0 0 18px;
+    font-size: 20px;
+    padding-right: 28px;
+}
+
+.flashcard-popup-field {
+    margin-bottom: 16px;
+}
+
+.flashcard-popup-field label,
+#new-flashcard-set-info label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+#flashcard-popup textarea,
+#flashcard-popup input[type="text"],
+#flashcard-set-select {
+    width: 100%;
+    padding: 9px 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: black;
+    font-size: 15px;
+    line-height: 1.45;
+    box-sizing: border-box;
+}
+
+#flashcard-popup textarea:focus,
+#flashcard-popup input[type="text"]:focus,
+#flashcard-set-select:focus {
+    outline: none;
+    border-color: teal;
+}
+
+/* A textarea inside a hidden element reports scrollHeight 0, so a page-wide auto-resize elsewhere on
+   the site can write height:0 onto these before the popup is ever opened. min-height keeps them
+   usable whatever any other script does; the JS also clears the stale inline height on open. */
+#flashcard-popup textarea {
+    resize: vertical;
+    min-height: 62px;
+}
+
+#flashcard-popup #term {
+    font-weight: bold;
+    min-height: 62px;
+}
+
+#flashcard-popup #definition {
+    min-height: 104px;
+}
+
+#flashcard-set-select-wrapper {
+    display: flex;
+    gap: 6px;
+}
+
+#flashcard-set-select {
+    flex: 1;
+    height: fit-content;
+}
+
+#refresh-flashcard-sets-button {
+    font-size: 13px;
+    padding: 0 10px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: teal;
+}
+
+#refresh-flashcard-sets-button:hover {
+    border-color: teal;
+}
+
+#refresh-flashcard-sets-button.is-loading i {
+    animation: flashcard-set-refresh-spin 0.7s linear infinite;
+}
+
+@keyframes flashcard-set-refresh-spin {
+    to { transform: rotate(360deg); }
+}
+
+#view-flashcard-set-button {
+    font-size: 13px;
+    padding: 0 12px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: teal;
+    display: none;
+    white-space: nowrap;
+}
+
+#view-flashcard-set-button:hover {
+    border-color: teal;
+}
+
+/* The two "switch mode" links read as text, not as competing buttons - only Save is an action. */
+#new-flashcard-set-button,
+#existing-flashcard-set-button {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 0;
+    background: none;
+    border: none;
+    color: teal;
+    font-size: 13px;
+    text-decoration: underline;
+}
+
+#new-flashcard-set-info {
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+    border: 1px solid whitesmoke;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+.flashcard-popup-save {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    padding: 11px;
+    background-color: teal;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.flashcard-popup-save:hover {
+    color: white;
+    opacity: 0.9;
+}
+
+#close-flashcard-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: transparent;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    font-size: 22px;
+    line-height: 1;
+    color: #888;
+}
+
+#close-flashcard-button:hover {
+    color: white;
+    background-color: red;
+}
+
+.go-to-all-flashcards-link {
+    display: block;
+    font-size: 13px;
+    margin-top: 14px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+#flashcard-premium-required {
+    display: none;
+}
+
+#flashcard-premium-required p {
+    margin: 0 0 18px;
+    font-size: 15px;
+    line-height: 1.55;
+    color: #444;
+}

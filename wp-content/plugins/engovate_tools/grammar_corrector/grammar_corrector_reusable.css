@@ -1,0 +1,32 @@
+.grammar-corrector-form-container del,
+.grammar-corrector-form-container ins,
+.grammar-corrector-form-container u {
+    border-radius: 3px;
+    padding: 0px 3px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.grammar-corrector-form-container del {
+    background-color: lightcoral;
+}
+
+.grammar-corrector-form-container ins,
+.grammar-corrector-form-container u {
+    background-color: lightgreen;
+}
+
+.grammar-corrector-form-container del.hide-diff,
+.grammar-corrector-form-container ins.hide-diff,
+.grammar-corrector-form-container u.hide-diff {
+    padding: 0px;
+    background-color: unset !important;
+    cursor: unset;
+}
+
+.highlight-corrected-differences-button, .highlight-corrected-differences-button:hover, .highlight-corrected-differences-button:focus {
+    display: none;
+    margin-bottom: 20px;
+    background-color: darkorange;
+    font-size: 14px;
+}

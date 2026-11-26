@@ -1,0 +1,73 @@
+.ielts-reading-band-score-calculator {
+    display: flex;
+    flex-direction: column;
+    max-width: 768px !important;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 25px;
+    text-align: center;
+}
+
+.raw-band-score-wrapper input {
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    font-size: 26px;
+    padding: 0px 0px 0px 15px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.raw-band-score-wrapper input:focus {
+    border: 1px solid black;
+}
+
+.band-score-type-wrapper select {
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 5px 0px 5px 15px;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.ielts-reading-band-score-calculator button[type="submit"] {
+    font-size: 26px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.reading-band-score-wrapper {
+    display: none;
+}
+
+.reading-rounded-band-score-label {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#reading-rounded-band-score {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.reading-unrounded-band-score-label {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+#reading-unrounded-band-score {
+    font-size: 26px;
+    line-height: 1;
+}

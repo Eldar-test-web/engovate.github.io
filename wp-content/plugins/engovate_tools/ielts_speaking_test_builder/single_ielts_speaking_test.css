@@ -1,0 +1,910 @@
+#ast-desktop-header, #ast-mobile-header {
+    display: none !important;
+}
+
+#main {
+    width: 100%;
+}
+
+h1 {
+    font-size: 22px !important;
+}
+
+h2 {
+    font-size: 22px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+h3 {
+    font-size: 20px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+h4 {
+    font-size: 18px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+p {
+    margin-bottom: 15px !important;
+}
+
+html, body {
+    height: 100%;
+    font-size: 18px !important;
+}
+
+#page {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100%;
+}
+
+.entry-content {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.custom-breadcrumb {
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+.ielts-test-category-info {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 15px 20px;
+    line-height: 1.6;
+    max-width: 768px;
+    margin-top: 20px;
+}
+
+.ielts-test-category-info h3 {
+    margin-bottom: 10px;
+}
+
+.site-content .ast-container {
+    max-width: 100%;
+    padding: 0px;
+    flex-wrap: wrap;
+}
+
+.ielts-speaking-test-container {
+    width: 100%;
+    height: 100vh;
+    overflow: visible;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.ielts-speaking-page-content {
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 50% 10px auto;
+    grid-template-rows: auto 1fr;
+}
+
+.ielts-speaking-page-content.question-only {
+    grid-template-columns: 100%;
+}
+
+.ielts-speaking-bottom-panel {
+    position: relative;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.ielts-speaking-comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.ielts-speaking-part-announcement-container {
+    position: relative;
+    grid-row: 1;
+    grid-column: 1 / -1;
+    padding: 2px 15px;
+    margin: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    line-height: 1.5;
+    text-align: center;
+    height: fit-content;
+}
+
+.ielts-speaking-part-question-count {
+    width: 100%;
+}
+
+.ielts-speaking-test-samples {
+    grid-row: 2;
+    max-height: 100%;
+    padding: 20px !important;
+    overflow-y: scroll;
+    position: relative; /*add this allow the position the note button to be set correctly */
+}
+
+.ielts-speaking-test-samples.question-only {
+    display: none;
+}
+
+.ielts-speaking-question-container {
+    grid-row: 2;
+    max-height: 100%;
+    padding: 20px;
+    overflow-y: scroll;
+    position: relative; /*add this allow the position the note button to be set correctly */
+}
+
+.ielts-speaking-resize-handle {
+    grid-row: 2;
+    max-height: 100%;
+    cursor: ew-resize;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    border-left: 1px solid gray;
+    position: relative;
+    text-align: center;
+}
+
+.ielts-speaking-resize-handle.question-only {
+    display: none;
+}
+
+.ielts-speaking-test-samples::-webkit-scrollbar, .ielts-speaking-question-container::-webkit-scrollbar {
+    width: 12px;
+}
+
+.ielts-speaking-test-samples::-webkit-scrollbar-track, .ielts-speaking-question-container::-webkit-scrollbar-track {
+    background-color: white;
+}
+
+.ielts-speaking-test-samples::-webkit-scrollbar-thumb, .ielts-speaking-question-container::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+}
+
+.ielts-speaking-test-samples::-webkit-scrollbar-thumb:hover, .ielts-speaking-question-container::-webkit-scrollbar-thumb:hover {
+    background-color: gray; /* Change the thumb color when hovering */
+}
+
+.ielts-speaking-resize-handle:hover {
+    background-color: rgb(236, 236, 236);
+}
+
+.ielts-speaking-resize-handle div {
+    position: absolute;
+    left: -12px;
+    border: 1px solid black;
+    background-color: white;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    color: rgb(33, 33, 33);
+}
+
+.ielts-speaking-page-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: rgb(255, 241, 241);
+}
+
+.ielts-speaking-page-header h1 {
+    grid-column: 2;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.ielts-speaking-header-export-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ielts-speaking-export-pdf-header-btn {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(70, 70, 70) !important;
+    outline: none !important;
+    font-size: 14px;
+    padding: 5px 7px;
+    border: 1px solid lightgray;
+    line-height: 1;
+}
+
+.ielts-speaking-site-header {
+    width: 100%;
+    padding: 10px 10px;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.site-logo {
+    max-width: 35px;
+}
+
+.ielts-speaking-test-extra-info {
+    text-align: center;
+    line-height: 1.5;
+}
+
+.ielts-speaking-timer {
+    font-size: 16px;
+}
+
+.ielts-speaking-band-score {
+    font-weight: bold;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.ielts-speaking-band-score.pending {
+    font-weight: normal;
+    font-size: 13px;
+    white-space: normal;
+    color: #555;
+}
+
+.ielts-speaking-focus-mode-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.ielts-speaking-header-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.ielts-speaking-part-announcement {
+    display: none;
+    font-size: 16px;
+}
+
+.ielts-speaking-part-announcement.current {
+    display: block;
+}
+
+.ielts-speaking-section-control-buttons {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    z-index: 9999;
+}
+
+#ielts-speaking-next-section-button, #ielts-speaking-previous-section-button {
+    font-size: 14px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+}
+
+#ielts-speaking-next-section-button:disabled, #ielts-speaking-previous-section-button:disabled {
+    background-color: darkgray;
+}
+
+.ielts-speaking-test-form {
+    width: 100%;
+}
+
+.ielts-speaking-questions {
+    text-align: center;
+}
+
+.ielts-speaking-question {
+    display: none;
+}
+
+.ielts-speaking-question.current {
+    display: block;
+}
+
+.question-number {
+    font-size: 16px;
+}
+
+.question-text {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ielts-speaking-question-speak-button, .ielts-speaking-question-speak-button:focus {
+    margin-left: 5px;
+    padding: 5px 8px;
+    font-size: 14px;
+    line-height: 1;
+    vertical-align: middle;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+.ielts-speaking-question-speak-button:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.ielts-speaking-question-speak-button:focus-visible {
+    outline: 2px solid black;
+    outline-offset: 2px;
+}
+
+.ielts-speaking-question-speak-button:disabled {
+    background-color: white;
+    color: gray;
+    border: 1px solid lightgray;
+    cursor: default;
+}
+
+[id^="pronunciation-result-container-"] {
+    display: none;
+    margin-bottom: 20px;
+}
+
+[id^="band-score-container-"] {
+    display: none;
+    margin-bottom: 30px;
+}
+
+.ielts-speaking-question-control-buttons {
+    position: absolute;
+    width: 100%;
+    bottom: -50px;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.ielts-speaking-question-control-buttons.disabled {
+    pointer-events: none;
+    opacity: 50%;
+}
+
+.ielts-speaking-question-control-buttons button {
+    font-size: 12px;
+    background-color: rgb(33, 33, 33);
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    pointer-events: auto;
+}
+
+.ielts-speaking-question-control-buttons.disabled button {
+    pointer-events: none;
+}
+
+.ielts-speaking-question-control-buttons button:disabled {
+    background-color: darkgray;
+}
+
+.ielts-speaking-sample {
+    display: none;
+}
+
+.ielts-speaking-sample.current {
+    display: block;
+}
+
+.ielts-speaking-question-palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ielts-speaking-question-palette .ielts-speaking-palette-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid lightgray;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.ielts-speaking-question-palette .ielts-speaking-palette-section.current {
+    border: 1px solid lightpink;
+    pointer-events: none;
+}
+
+.ielts-speaking-question-palette .ielts-speaking-palette-section.current .ielts-speaking-palette-section-question-count {
+    display: none;
+}
+
+.ielts-speaking-question-palette .ielts-speaking-palette-item {
+    display: none;
+}
+
+.ielts-speaking-question-palette .ielts-speaking-palette-section.current .ielts-speaking-palette-item {
+    display: inline-block;
+    pointer-events: auto;
+}
+
+.ielts-speaking-bottom-panel.disabled, .ielts-speaking-bottom-panel.disabled .ielts-speaking-palette-section.current .ielts-speaking-palette-item {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.ielts-speaking-question-palette .ielts-speaking-palette-item a.completed {
+    background-color: gray;
+    color: white;
+}
+
+.ielts-speaking-question-palette .ielts-speaking-palette-item a {
+    display: inline-block;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 3px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
+
+.ielts-speaking-submit-button, .ielts-speaking-submit-button:focus {
+    background-color: green;
+    font-weight: bold;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.ielts-speaking-submit-button:hover {
+    background-color: #33b249;
+}
+
+.ielts-speaking-submit-button.locked, .ielts-speaking-submit-button.locked:focus {
+    background-color: #d35400;
+}
+
+.ielts-speaking-submit-button.locked:hover {
+    background-color: #e65c00;
+}
+
+.ielts-speaking-submit-button:disabled {
+    background-color: gray;
+}
+
+.ielts-speaking-improve-button-wrapper {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ielts-speaking-enhance-natural-button, .ielts-speaking-enhance-natural-button:focus, .ielts-speaking-enhance-natural-button:hover {
+    background-color: teal;
+    font-size: 22px;
+}
+
+.ielts-speaking-improve-button, .ielts-speaking-improve-button:focus, .ielts-speaking-improve-button:hover {
+    background-color: darkslateblue;
+    font-size: 22px;
+}
+
+.ielts-speaking-enhance-natural-button:disabled, .ielts-speaking-improve-button:disabled {
+    background-color: gray;
+}
+
+.compare-enhance-container, .compare-natural-container {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.compare-enhance-container h3, .compare-natural-container h3 {
+    margin-bottom: 5px;
+}
+
+.compare-content-column {
+    position: relative; /* for the male and female audio button to position correctly */
+    text-align: left;
+}
+
+.male-audio-button, .female-audio-button, .download-male-audio-button, .download-female-audio-button {
+    position: absolute;
+    top: -15px;
+    font-size: 12px;
+    line-height: 1;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid gray;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.male-audio-button {
+    left: 135px;
+}
+
+.female-audio-button {
+    left: 197px;
+}
+
+.download-male-audio-button {
+    left: 280px;
+}
+
+.download-female-audio-button {
+    left: 339px;
+}
+
+.male-audio-button:hover, .female-audio-button:hover, .download-male-audio-button:hover, .download-female-audio-button:hover,
+.male-audio-button:focus, .female-audio-button:focus, .download-male-audio-button:focus, .download-female-audio-button:focus {
+    color: black;
+    border: 2px solid black;
+    background-color: white;
+}
+
+#ielts-speaking-focus-mode-button {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(80, 80, 80);
+    font-size: 16px;
+    padding: 5px 7px;
+    border: 1px solid lightgray;
+    line-height: 1;
+}
+
+#ielts-speaking-dropdown-button {
+    background-color: white;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    font-size: 25px;
+    padding: 0px;
+}
+
+.ielts-speaking-dropdown-menu {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+}
+
+.ielts-speaking-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10000;
+    right: 0px;
+    top: 30px;
+    white-space: nowrap;
+}
+
+.ielts-speaking-dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.ielts-speaking-dropdown-content a:hover {
+    background-color: whitesmoke;
+}
+
+.ielts-speaking-focus-mode {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 9 !important;
+    background: white !important;
+}
+
+.ielts-speaking-control-tip {
+    font-size: 13px;
+    text-align: center;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+.ielts-speaking-end-of-test-content {
+    width: 100%;
+    padding: 15px 10px;
+    background-color: rgb(255, 241, 241);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 99999;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: none;
+}
+
+.spinner-overlay strong {
+    color: white;
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.spinner {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .ielts-speaking-page-content {
+        grid-template-rows: repeat(4, auto);
+    }
+
+    .ielts-speaking-test-samples {
+        grid-column: 1 / -1;
+        grid-row: 4;
+    }
+
+    .ielts-speaking-resize-handle {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        height: 1px;
+        background-color: black;
+        width: 100%;
+    }
+    
+    .ielts-speaking-question-container {
+        grid-column: 1 / -1;
+        grid-row: 2;
+    }
+
+    .ielts-speaking-resize-handle div {
+        display: none;
+    }
+
+    .ielts-speaking-site-header {
+        padding: 5px 0px;
+    }
+
+    .ielts-speaking-part-announcement-container {
+        margin: 0px 15px;
+    }
+    
+    .ielts-speaking-part-question-count {
+        display: none;
+    }
+
+    .ielts-speaking-question-palette .ielts-speaking-palette-section {
+        display: none;
+    }
+
+    .ielts-speaking-question-palette .ielts-speaking-palette-section.current {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .ielts-speaking-question-palette .ielts-speaking-palette-section-part {
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        background-color: white;
+        border-radius: 5px;
+        padding: 0px 5px;
+        font-size: 16px;
+        line-height: 1;
+    }
+
+    .ielts-speaking-question-palette .ielts-speaking-palette-item a {
+        width: 22px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 14px;
+    }
+}
+
+@media print {
+    @page {
+        margin: 1.5cm 2cm;
+        size: A4;
+    }
+
+    .custom-breadcrumb,
+    .ielts-online-test-tag,
+    .site-logo,
+    #wpadminbar,
+    .announcement-bar,
+    .site-footer,
+    .ielts-speaking-site-header,
+    .ielts-speaking-bottom-panel,
+    .spinner-overlay,
+    .ielts-speaking-end-of-test-content,
+    .ielts-speaking-comment-section,
+    .entry-content,
+    .payment-popup-container,
+    .fast-verification-popup-container,
+    .ielts-speaking-export-pdf-link,
+    .ielts-speaking-print-hidden {
+        display: none !important;
+    }
+
+    html, body {
+        font-size: 11pt !important;
+        background: white !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    #page, .site-content, #primary, #main, .ast-container {
+        display: block !important;
+        height: auto !important;
+        min-height: 0 !important;
+        overflow: visible !important;
+    }
+
+    .ielts-speaking-page-header {
+        background: transparent !important;
+        border-bottom: 1.5pt dashed #333;
+        padding-bottom: 10pt;
+        margin-bottom: 20pt;
+    }
+
+    .ielts-speaking-print-container {
+        display: block !important;
+        font-family: Arial, sans-serif;
+        font-size: 11pt;
+        color: #000;
+    }
+
+    .ielts-speaking-print-part-label {
+        font-size: 14pt;
+        font-weight: bold;
+        margin-top: 20pt;
+        margin-bottom: 10pt;
+        padding-bottom: 4pt;
+        border-bottom: 2pt solid #333;
+        page-break-before: always;
+    }
+
+    .ielts-speaking-print-part-label:first-child,
+    .ielts-print-result-summary + .ielts-speaking-print-part-label {
+        page-break-before: auto;
+        margin-top: 0;
+    }
+
+    .ielts-speaking-print-question-block {
+        margin-bottom: 16pt;
+        padding-bottom: 12pt;
+        border-bottom: 1pt solid #eee;
+    }
+
+    .ielts-speaking-print-question-number {
+        font-weight: bold;
+        font-size: 11pt;
+        margin-bottom: 4pt;
+    }
+
+    .ielts-speaking-print-transcript-label {
+        font-weight: bold;
+        margin-top: 8pt;
+        margin-bottom: 4pt;
+        font-size: 11pt;
+    }
+
+    .ielts-speaking-print-transcript {
+        line-height: 1.6;
+        border: 1pt solid #ccc;
+        padding: 8pt;
+        margin-bottom: 10pt;
+    }
+
+    .ielts-speaking-print-question-block .pronunciation-result-container {
+        display: block !important;
+        margin-top: 10pt;
+        padding-top: 10pt;
+        border-top: 1pt solid #ccc;
+        margin-bottom: 10pt;
+    }
+
+    .ielts-speaking-print-question-block .refined-pronunciation-transcript-audio-speak,
+    .ielts-speaking-print-question-block .metric-explanation-close-button,
+    .ielts-speaking-print-question-block .pronunciation-result-tips {
+        display: none !important;
+    }
+
+    .ielts-speaking-print-question-block .pronunciation-word strong,
+    .ielts-speaking-print-question-block .pronunciation-word-score {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .ielts-speaking-print-question-block .band-score-container {
+        display: block !important;
+        margin-top: 10pt;
+        padding-top: 10pt;
+        border-top: 1pt solid #ccc;
+    }
+
+    .ielts-speaking-print-question-block .export-answer-result-button-wrapper {
+        display: none !important;
+    }
+
+    .ielts-speaking-print-question-block .band-score-premium-cta,
+    .ielts-speaking-print-question-block .band-score-premium-cta-promo {
+        display: none !important;
+    }
+
+    .ielts-print-result-summary {
+        display: flex;
+        align-items: center;
+        gap: 24pt;
+        padding: 8pt 0 12pt;
+        border-bottom: 1pt solid #ccc;
+        margin-bottom: 16pt;
+    }
+
+    .ielts-print-band-score {
+        font-size: 16pt;
+        font-weight: bold;
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .ielts-print-time-taken {
+        font-size: 12pt;
+        color: #444;
+    }
+}

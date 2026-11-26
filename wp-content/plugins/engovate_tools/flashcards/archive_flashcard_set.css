@@ -1,0 +1,360 @@
+#site-content {
+    width: 100%;
+}
+
+.archive-header {
+    text-align: center;
+}
+
+.archive-header h1 {
+    font-size: 2.5rem;
+}
+
+.archive-introduction {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 1rem;
+}
+
+.flashcard-set-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.flashcard-set-search input[type="search"] {
+    width: 20rem;
+    padding: 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.flashcard-set-search select {
+    padding: 5px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.flashcard-set-search button {
+    margin-left: 10px;
+}
+
+.flashcard-set-search div {
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.flashcard-set-search a {
+    cursor: pointer;
+}
+
+.search-results {
+    display: none;
+    margin-bottom: 30px;
+    padding: 30px 20px 10px 20px;
+    background-color: rgb(252, 252, 252);
+    border-radius: 5px;
+}
+
+.flashcard-set-categories {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid gray;
+    border-radius: 5px;
+    overflow: auto;
+    padding: 5px;
+}
+
+.flashcard-set-categories button {
+    flex-grow: 1;
+    color: black;
+    background-color: inherit;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.flashcard-set-categories button i {
+    margin-left: 5px;
+}
+
+.flashcard-set-categories button:hover {
+    background-color: whitesmoke;
+}
+
+.flashcard-set-categories button.active {
+    color: white;
+    background-color: rgb(50, 50, 50);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.flashcard-set-posts {
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.tag-title, .category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+.tag-posts, .category-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.flashcard-set, .add-flashcard-set {
+    width: calc(25% - 15px) !important;
+    padding: 10px 10px 5px 10px !important;
+    border: 1px solid gray !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 0px !important;
+    border-radius: 5px;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.flashcard-set .post-thumbnail img {
+    border-radius: 5px;
+}
+
+.flashcard-set .post-header {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+
+.flashcard-set .post-title{
+    font-size: 0.8rem;
+}
+
+.flashcard-set .post-title a{
+    font-weight: bold;
+}
+
+.post-content {
+    font-size: 0.7rem;
+    flex-grow: 1;
+}
+
+.post-content {
+    margin-bottom: 5px;
+}
+
+.post-content p {
+    margin-bottom: 0px;
+}
+
+.read-more {
+    display: none;
+}
+
+.start-learning-button {
+    display: block;
+    color: white;
+    font-weight: bold;
+    font-size: 0.7rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 5px;
+    background-color: teal;
+}
+
+.start-learning-button:hover, .start-learning-button:focus {
+    color: white;
+}
+
+.category-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px dashed gray !important;
+}
+
+.tag-navigation {
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: inline-flex;
+    gap: 5px;
+}
+
+.page-numbers {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 0px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-numbers.current {
+    background-color: whitesmoke;
+}
+
+.see-all {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0px 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+    display: block;
+    width: 80px;
+    height: 80px;
+    border: 8px solid lightgray;
+    border-radius: 50%;
+    border-top: 8px solid #3498db;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tag-posts {
+        gap: 10px;
+    }
+    .category-posts {
+        gap: 10px;
+    }
+    .flashcard-set {
+        width: calc(50% - 5px) !important;
+    }
+    .flashcard-set-search {
+        gap: 5px;
+    }
+    .flashcard-set-search input[type="search"]{
+        width: calc(65% - 2.5px);
+    }
+    .flashcard-set-search select {
+        width: calc(35% - 2.5px);
+    }
+}
+
+/* LOCAL FLASHCARDS */
+/* A note is a sentence, not a card. On the default view it also carries .flashcard-set so it takes a
+   place in the flex row - without these overrides it inherits that card's fixed width and
+   flex-direction: column, which stacks "Note:", the link and the rest of the sentence on three
+   separate lines. */
+.flashcard-set-note {
+    font-size: 13px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.6;
+    display: block !important;
+    width: 100% !important;
+    text-align: left;
+    border: none !important;
+    box-shadow: none;
+    background: none;
+    padding: 0 !important;
+}
+
+.add-flashcard-set {
+    cursor: pointer;
+}
+
+.add-flashcard-set strong {
+    font-size: 45px;
+    line-height: 1;
+}
+
+.add-flashcard-set span {
+    font-size: 18px;
+    color: rgb(100, 100, 100);
+    font-weight: bold;
+}
+
+.add-flashcard-set:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.local-flashcard-select-sort {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.local-flashcard-settings-button {
+    font-size: 16px;
+    padding: 8px;
+    background-color: white;
+    border: 1px solid lightgray;
+    color: black;
+    display: block;
+}
+
+/* The gear and its panel travel together: the panel hangs off the bottom-right of this wrapper, so it
+   always lands under the gear that opened it whatever else is on the row. No coordinates in the JS. */
+.local-flashcard-settings {
+    position: relative;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* The wrapper floats right; without this the cards below wrap around the float and share its row. */
+.account-flashcard-set-posts .tag-posts,
+.legacy-flashcard-set-posts .tag-posts {
+    clear: both;
+}
+
+.local-flashcard-settings-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    /* Wide enough that a menu item stays on one line - these are labels, not prose. */
+    min-width: 220px;
+    white-space: nowrap;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.local-flashcard-settings-panel a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.local-flashcard-settings-panel a:hover {
+    background-color: whitesmoke;
+}

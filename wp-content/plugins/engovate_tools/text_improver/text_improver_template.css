@@ -1,0 +1,12 @@
+#submit-button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#submit-button:disabled {
+    background-color: gray;
+}
+
+#original-text .content-editable-div, #improved-text .content-editable-div {
+    min-height: 200px;
+}

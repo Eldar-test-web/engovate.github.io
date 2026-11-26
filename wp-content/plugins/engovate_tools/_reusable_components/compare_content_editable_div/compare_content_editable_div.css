@@ -1,0 +1,17 @@
+.compare-content-row {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+
+.compare-content-row > div {
+    width: 50%;
+}
+
+.compare-content-row.mobile {
+    flex-wrap: wrap;
+}
+
+.compare-content-row.mobile > div {
+    width: 100%;
+}

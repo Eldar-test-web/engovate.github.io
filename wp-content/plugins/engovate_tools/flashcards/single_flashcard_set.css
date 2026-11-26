@@ -1,0 +1,584 @@
+.site-main {
+    width: 100%;
+}
+
+.entry-header {
+    margin-top: 10px;
+    margin-bottom: 0px !important;
+}
+
+.entry-content {
+    max-width: 768px;
+    padding: 10px;
+}
+
+.flashcard_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px !important;
+    margin-top: 50px !important;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 20px !important;
+    margin-bottom: 0px !important;
+}
+
+.flashcard-set-term-count {
+    font-size: 16px;
+    font-weight: bold;
+    color: rgb(100, 100, 100);
+    line-height: 1.2;
+}
+
+.learn-flashcard-set-buttons {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 10px;
+}
+
+.learn-flashcard-set-buttons a {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: white;
+    padding: 0px 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.flip-flashcard-button {
+    background-color: darkslateblue;
+}
+
+.type-flashcard-button {
+    background-color: darkmagenta;
+}
+
+.print-flashcard-button {
+    background-color: teal;
+}
+
+.flashcard-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.flashcard-item, .add-flashcard-item {
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.add-flashcard-item {
+    color: rgb(100, 100, 100);
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    cursor: pointer;
+}
+
+.add-flashcard-item:hover {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.flashcard-term-wrapper {
+    width: 30%;
+    border-right: 2px solid lightgray;
+    line-height: 0;
+}
+
+.flashcard-definition-wrapper {
+    width: 70%;
+    line-height: 0;
+}
+
+.flashcard-term, .flashcard-definition {
+    background-color: white;
+    color: black;
+    overflow: hidden;
+    resize: none;
+    border: none;
+}
+
+.flashcard-term:focus, .flashcard-definition:focus {
+    border: none;
+}
+
+.delete-flashcard-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    padding: 0px;
+    border: 1px solid gray;
+    border-radius: 50%;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.audio-flashcard-button {
+    position: absolute;
+    top: -14px;
+    left: -10px;
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+    color: black;
+}
+
+.delete-flashcard-button:hover {
+    background-color: whitesmoke;
+    color: red;
+}
+
+.audio-flashcard-button:hover {
+    background-color: transparent;
+    font-size: 22px;
+    color: black;
+}
+
+.audio-flashcard-button:focus {
+    background-color: transparent;
+    color: black;
+}
+
+.back-to-flashcard-set-button {
+    font-size: 12px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: black;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-decoration: none;
+    line-height: 1.5;
+}
+
+/* FLIP FLASHCARDS */
+.flip-flashcard-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.flip-flashcard-item {
+    display: none;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    transition: transform 0.2s;
+    transform: translateX(0);
+}
+
+.flip-flashcard-item.current {
+    display: block;
+}
+
+.flip-flashcard-item.slide-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.flip-flashcard-item.slide-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.flip-flashcard-term-wrapper, .flip-flashcard-definition-wrapper {
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: white;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.flip-flashcard-term, .flip-flashcard-definition {
+    white-space: pre-wrap; /* make content respecting line break */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: auto;
+}
+
+.flip-flashcard-item.flipped .flip-flashcard-term-wrapper {
+    transform: rotateX(-180deg);
+    pointer-events: none;
+}
+
+.flip-flashcard-item.flipped .flip-flashcard-definition-wrapper {
+    transform: rotateX(0deg);
+    pointer-events: auto;
+}
+
+.flip-flashcard-term-wrapper {
+    transform: rotateX(0deg);
+    transition: 0.5s;
+    pointer-events: auto; /*necessary to allow the current face to receive scrolling event */
+}
+
+.flip-flashcard-definition-wrapper {
+    transform: rotateX(180deg);
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.flip-flashcard-control-buttons {
+    text-align: right;
+    width: 100%;
+    margin-top: 5px;
+}
+
+.flip-flashcard-control-buttons label {
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    user-select: none;
+}
+
+.flip-flashcard-control-buttons input {
+    pointer-events: none;
+}
+
+.flip-flashcard-counter {
+    width: 100%;
+    font-weight: bold;
+    font-size: 22px;
+    color: rgb(100, 100, 100);
+}
+
+.flip-flashcard-notice {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+    text-align: center;
+    font-size: 13px;
+    font-style: italic;
+    color: rgb(100, 100, 100);
+}
+
+.flip-flashcard-audio-buttons {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+
+.flip-flashcard-audio-button {
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+.flip-flashcard-audio-button:hover {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+}
+
+.flip-flashcard-audio-button:focus {
+    background-color: transparent;
+    border: 1px solid lightgray;
+    color: black;
+}
+
+.flip-flashcard-back-button {
+    margin-right: 50px;
+}
+
+.flip-flashcard-back-button, .flip-flashcard-next-button {
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    color: black;
+}
+
+.flip-flashcard-back-button:focus, .flip-flashcard-next-button:focus {
+    background-color: white;
+    border: 1px solid whitesmoke;
+    color: black;
+}
+
+.flip-flashcard-back-button:hover, .flip-flashcard-next-button:hover {
+    background-color: whitesmoke;
+    border: 1px solid whitesmoke;
+    color: black;
+}
+
+/* TYPE FLASHCARDS */
+.type-flashcard-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.type-flashcard-item {
+    display: none;
+    position: relative;
+    background-color: white;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 20px;
+    transition: transform 0.2s;
+    transform: translateX(0);
+}
+
+.type-flashcard-item.current {
+    display: block;
+}
+
+.type-flashcard-item.slide-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.type-flashcard-counter {
+    width: 100%;
+    font-weight: bold;
+    font-size: 22px;
+    color: rgb(100, 100, 100);
+}
+
+.type-flashcard-definition {
+    white-space: pre-wrap;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.type-flashcard-term {
+    display: none;
+}
+
+.type-flashcard-term-textarea-wrapper {
+    position: relative;
+    line-height: 1;
+}
+
+.type-flashcard-term-textarea {
+    width: 100%;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 20px;
+    overflow: hidden;
+    resize: none;
+}
+
+.type-flashcard-term-textarea:focus {
+    border: 1px solid gray;
+}
+
+.type-flashcard-term-title, .type-flashcard-definition-title {
+    margin-bottom: 5px !important;
+    font-size: 14px !important;
+    color: rgb(100, 100, 100) !important;
+    font-weight: bold !important;
+}
+
+.type-flashcard-audio-buttons {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+
+.type-flashcard-audio-button {
+    background-color: transparent;
+    padding: 5px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 16px;
+    color: black;
+}
+
+.type-flashcard-audio-button:hover {
+    background-color: transparent;
+    border: 2px solid black;
+    color: black;
+}
+
+.type-flashcard-audio-button:focus {
+    background-color: transparent;
+    border: 1px solid lightgray;
+    color: black;
+}
+
+.type-flashcard-show-answer-button {
+    width: 100%;
+    font-size: 14px;
+    color: black;
+    margin-bottom: 25px;
+}
+
+.comment-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.comments-area {
+    width: 100%;
+    max-width: 768px;
+    border: 1px solid lightgray !important;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* LOCAL FLASHCARDS */
+.flashcard-set-title-input {
+    width: 100%;
+    background-color: white !important;
+    border: none !important;
+    border-bottom: 3px solid lightgray !important;
+    padding-left: 0px !important;
+    margin-bottom: 25px !important;
+    font-size: 25px;
+    color: black !important;
+}
+
+.flashcard-set-title-input:focus {
+    border-bottom: 3px solid lightcoral !important;
+}
+
+/* The gear and its panel travel together: the panel hangs off the bottom-right of this wrapper, so it
+   always lands under the gear that opened it whatever else is on the row. No coordinates in the JS. */
+.flashcard-set-settings {
+    position: relative;
+    float: right;
+}
+
+.flashcard-set-settings-button {
+    font-size: 16px;
+    padding: 8px;
+    background-color: white;
+    border: 1px solid lightgray;
+    color: black;
+    display: block;
+}
+
+.flashcard-set-settings-panel {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    /* Wide enough that a menu item stays on one line - these are labels, not prose. */
+    min-width: 240px;
+    white-space: nowrap;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.flashcard-set-settings-panel a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.flashcard-set-settings-panel a:hover {
+    background-color: whitesmoke;
+}
+
+.flashcard-print-sheet {
+    display: none;
+}
+
+@media print {
+    body.flashcard-printing > *:not(.flashcard-print-sheet) {
+        display: none !important;
+    }
+
+    body.flashcard-printing .flashcard-print-sheet {
+        display: block;
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .flashcard-print-sheet h1 {
+        font-size: 22px;
+        margin: 0 0 12px;
+        color: #000;
+    }
+
+    .flashcard-print-sheet table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .flashcard-print-sheet th,
+    .flashcard-print-sheet td {
+        border: 1px solid #999;
+        padding: 6px 8px;
+        text-align: left;
+        vertical-align: top;
+        white-space: pre-line;
+        color: #000;
+    }
+
+    .flashcard-print-sheet th:first-child,
+    .flashcard-print-sheet td:first-child {
+        width: 32px;
+    }
+
+    .flashcard-print-sheet td:nth-child(2) {
+        width: 28%;
+        font-weight: bold;
+    }
+
+    .flashcard-print-sheet tr {
+        page-break-inside: avoid;
+    }
+}

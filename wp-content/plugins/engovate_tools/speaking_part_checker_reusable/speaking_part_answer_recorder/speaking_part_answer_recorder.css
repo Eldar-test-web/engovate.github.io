@@ -1,0 +1,74 @@
+.speaking-part-answer-recorder {
+    position: relative;
+}
+
+.speaking-part-answer-recorder .content-editable-div {
+    padding-bottom: 150px;
+}
+
+.speaking-part-answer-recorder .audio-record-container {
+    position: absolute;
+    bottom: 90px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.speaking-part-answer-recorder .audio-upload-container {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.speaking-part-answer-recorder .answer-extra-info {
+    display: flex;
+}
+
+.speaking-part-answer-recorder .word-count {
+    display: none;
+}
+
+.speaking-part-answer-recorder .speaking-time {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    font-style: italic;
+    line-height: 1;
+}
+
+.speaking-part-note {
+    position: absolute;
+    bottom: 30px;
+    right: 8px;
+}
+
+.speaking-part-note button {
+    background-color: rgb(255, 255, 236);
+    color: black;
+    font-size: 14px;
+    padding: 5px;
+    border: 1px solid gray;
+}
+
+.speaking-part-note .note-popup {
+    display: none;
+    position: absolute;
+    width: 350px;
+    max-height: 300px;
+    right: 0px;
+    font-size: 18px;
+    border: 1px solid gray;
+    background-color: rgb(255, 255, 236);
+    border-radius: 5px;
+    overflow: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.speaking-part-note .note-content {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.speaking-part-note .note-content:focus {
+    outline: none;
+}

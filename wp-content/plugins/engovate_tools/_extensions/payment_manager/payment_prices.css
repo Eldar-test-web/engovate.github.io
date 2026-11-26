@@ -1,0 +1,145 @@
+.trust-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px 15px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    border-radius: 8px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.trust-bar-item {
+    white-space: nowrap;
+}
+
+.payment-checkout-notice {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.payment-refund-notice {
+    display: none;
+    margin-bottom: 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    color: rgb(70, 70, 70);
+}
+
+.payment-price {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.payment-price.selected {
+    border: 1px solid black;
+    background-color: lightcyan;
+}
+
+.payment-price.highlighted {
+    border: 2px solid green;
+}
+
+.payment-price input {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    pointer-events: none;
+}
+
+.normal-price {
+    text-decoration: line-through;
+    color: rgb(100, 100, 100);
+}
+
+.discounted-price {
+    color: red;
+}
+
+.discounted-price span {
+    font-weight: normal;
+}
+
+.cent-price {
+    display: none;
+    color: rgb(100, 100, 100);
+    font-size: 13px;
+}
+
+.most-popular-price {
+    position: absolute;
+    top: -13px;
+    right: 5px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    line-height: 1.3;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.extra-discount {
+    position: absolute;
+    top: -10px;
+    left: 5px;
+    padding: 1px 8px;
+    border-radius: 5px;
+    background-color: darkslateblue;
+    color: white;
+    line-height: 1.3;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.payment-plan-limited-time-discount {
+    position: absolute;
+    z-index: 99;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    line-height: 1.3;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    animation: limited-time-pulse 2s infinite;
+}
+
+/* .payment-plan-limited-time-discount .limited-time-text {
+    font-size: 14px;
+}
+
+.payment-plan-limited-time-discount .timer {
+    font-size: 14px;
+} */
+
+@keyframes limited-time-pulse {
+  0% {
+    transform: translateX(-50%) scale(1);
+  }
+  50% {
+    transform: translateX(-50%) scale(1.03);
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+  }
+}
