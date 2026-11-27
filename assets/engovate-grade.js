@@ -14,10 +14,11 @@
   var isListening = key.kind === "listening" || /listening/i.test(location.pathname + " " + document.title);
   var prefix = isListening ? "ielts-listening" : "ielts-reading";
 
+  // Exact tables from the original plugin JS (single_ielts_*_test.js).
   var bandTable = {
-    listening: [[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5],[0,2]],
-    academic: [[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5],[0,2]],
-    general: [[40,9],[39,8.5],[38,8],[36,7.5],[34,7],[32,6.5],[30,6],[26,5.5],[23,5],[18,4.5],[15,4],[13,3.5],[10,3],[8,2.5],[6,2],[0,1.5]]
+    listening: [[39,9],[37,8.5],[35,8],[32,7.5],[30,7],[26,6.5],[23,6],[18,5.5],[16,5],[13,4.5],[11,4],[9,3.5],[7,3],[5,2.5],[3,2],[0,1]],
+    academic: [[39,9],[37,8.5],[35,8],[33,7.5],[30,7],[27,6.5],[23,6],[19,5.5],[15,5],[13,4.5],[10,4],[8,3.5],[6,3],[4,2.5],[2,2],[0,1]],
+    general: [[40,9],[39,8.5],[37,8],[36,7.5],[34,7],[32,6.5],[30,6],[27,5.5],[23,5],[19,4.5],[15,4],[12,3.5],[9,3],[7,2.5],[5,2],[3,1.5],[0,1]]
   };
 
   function bandFor(score, type) {
@@ -205,7 +206,9 @@
     var tbody = find("." + prefix + "-result-table-body", overlay);
     if (!content || !info || !tbody) return;
 
-    var isGeneral = !isListening && /general/i.test(location.pathname + " " + document.title);
+    var catInput = document.getElementById("category_type");
+    var cat = catInput ? (catInput.value || "") : "";
+    var isGeneral = !isListening && (/general/i.test(cat + " " + location.pathname + " " + document.title));
     var type = isListening ? "listening" : (isGeneral ? "general" : "academic");
     var scaled = total === 40 ? correct : Math.round(correct * 40 / total);
     var band = bandFor(scaled, type);
