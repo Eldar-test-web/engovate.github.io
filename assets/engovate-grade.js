@@ -35,31 +35,104 @@
     return norm(v).replace(/\s+/g, "");
   }
 
-  // Answer keys often list alternatives separated by "/" ("BEGINNING / BEGINNER").
-  // Accept any alternative, ignoring punctuation/spacing differences.
-  function isMatch(user, correct) {
-    var u = norm(user);
-    if (!u) return false;
-    var raw = correct == null ? "" : String(correct);
-    var candidates = [raw].concat(raw.split("/"));
+  function same(a, b) {
+    var x = norm(a);
+    if (!x) return false;
+    var y = norm(b);
+    return !!y && (x === y || compact(x) === compact(y));
+  }
+
+  // Answer keys list alternatives separated by "/" ("BEGINNING / BEGINNER"), and sometimes
+  // prefix the option letter with a comma ("C, TAKE OFF THEIR JEWELLERY,").
+  // Clean commas from both ends of each alternative and add the bare letter as an option.
+  function answerCandidates(correct) {
+    var out = [];
+    var parts = String(correct == null ? "" : correct).split("/");
+    for (var i = 0; i < parts.length; i++) {
+      var clean = parts[i].replace(/^[\s,;:]+|[\s,;:]+$/g, "").trim();
+      if (!clean) continue;
+      out.push(clean);
+      var m = clean.match(/^([A-Da-d])\s*[,;:.\-\s]+(.+)$/);
+      if (m) {
+        out.push(m[1]);
+        out.push(m[2].replace(/^[\s,;:]+|[\s,;:]+$/g, "").trim());
+      }
+    }
+    return out;
+  }
+
+  // For radio groups the key may hold the visible option text ("ASIA", "SERVICE")
+  // rather than the submitted value ("A", "B"). Map that text back to the value.
+  function radioOptionTexts(el) {
+    var out = [];
+    var parent = el.parentNode;
+    var labelText = "";
+    var labels = (el.labels && el.labels.length) ? Array.prototype.slice.call(el.labels) : [];
+    if (!labels.length && parent && parent.querySelector) {
+      var local = parent.querySelector("label");
+      if (local) labels.push(local);
+    }
+    for (var i = 0; i < labels.length; i++) {
+      var text = String(labels[i].textContent || "").replace(/\s+/g, " ").trim();
+      if (text) { out.push(text); labelText = text; }
+    }
+    if (parent && parent.textContent) {
+      var pt = String(parent.textContent).replace(/\s+/g, " ").trim();
+      if (pt) {
+        out.push(pt);
+        if (labelText && pt.toLowerCase().indexOf(labelText.toLowerCase()) === 0) {
+          out.push(pt.slice(labelText.length).replace(/^[\s.,;:]+/, "").trim());
+        }
+        out.push(pt.replace(/^[A-Da-d]\s*[,.;:\s]*/, "").trim());
+      }
+    }
+    return out;
+  }
+
+  function isMatch(user, correct, els) {
+    var candidates = answerCandidates(correct);
+    if (!candidates.length) return false;
     for (var i = 0; i < candidates.length; i++) {
-      var c = norm(candidates[i]);
-      if (c && (c === u || compact(c) === compact(u))) return true;
+      if (same(user, candidates[i])) return true;
+    }
+    if (els && els.length) {
+      for (var j = 0; j < els.length; j++) {
+        var el = els[j];
+        if (!el.checked || el.type !== "radio") continue;
+        var texts = radioOptionTexts(el);
+        for (var k = 0; k < texts.length; k++) {
+          for (var c = 0; c < candidates.length; c++) {
+            if (same(candidates[c], texts[k])) return true;
+          }
+        }
+      }
     }
     return false;
   }
 
-  function valueOf(n) {
+  function fieldsOf(n) {
     var form = document.querySelector("form[id*='test-form']") || document;
-    var els = form.querySelectorAll("[name='" + n + "']");
+    try { return Array.prototype.slice.call(form.querySelectorAll("[name='" + n + "']")); }
+    catch (e) { return []; }
+  }
+
+  function valueOf(els) {
+    var picked = [];
     for (var i = 0; i < els.length; i++) {
-      if (els[i].type === "radio" || els[i].type === "checkbox") {
-        if (els[i].checked) return els[i].value;
-      } else if (els[i].value && els[i].value.trim()) {
-        return els[i].value;
+      var el = els[i];
+      if (el.type === "radio" || el.type === "checkbox") {
+        if (el.checked && el.value && el.value.trim()) picked.push(el.value);
+      } else if (el.value && el.value.trim()) {
+        return el.value;
       }
     }
-    return "";
+    return picked.join(", ");
+  }
+
+  function checkAnswer(n) {
+    var els = fieldsOf(n);
+    var user = valueOf(els);
+    return { user: user, ok: isMatch(user, answers[n], els) };
   }
 
   function find(sel, root) {
@@ -172,13 +245,18 @@
   function resetAnswers() {
     var form = document.querySelector("form[id*='test-form']") || document;
     names.forEach(function (n) {
-      var els = form.querySelectorAll("[name='" + n + "']");
+      var els = fieldsOf(n);
       for (var i = 0; i < els.length; i++) {
         if (els[i].type === "radio" || els[i].type === "checkbox") els[i].checked = false;
         else if (els[i].type && /^select/.test(els[i].type)) els[i].selectedIndex = -1;
         else els[i].value = "";
       }
     });
+    // Unkeyed groups (e.g. ungraded "choose two" checkboxes) still need clearing on retake.
+    if (form !== document) {
+      var selects = form.querySelectorAll("input[type='radio'], input[type='checkbox']");
+      for (var j = 0; j < selects.length; j++) selects[j].checked = false;
+    }
   }
 
   function hideOverlay() {
@@ -260,9 +338,10 @@
 
     tbody.innerHTML = "";
     names.forEach(function (n, i) {
-      var user = valueOf(n);
+      var result = checkAnswer(n);
+      var user = result.user;
       var answer = answers[n];
-      var ok = isMatch(user, answer);
+      var ok = result.ok;
       var row = make("tr", (ok ? "correct-" : "incorrect-") + prefix + "-answer");
 
       var num = make("td");
@@ -297,10 +376,9 @@
     var correct = 0;
     var wrong = [];
     names.forEach(function (n) {
-      var user = valueOf(n);
-      var answer = answers[n];
-      if (isMatch(user, answer)) correct++;
-      else wrong.push({ q: n.split("_").pop(), your: user || "—", correct: answer });
+      var result = checkAnswer(n);
+      if (result.ok) correct++;
+      else wrong.push({ q: n.split("_").pop(), your: result.user || "—", correct: answers[n] });
     });
     showResult(correct, names.length, wrong);
   }

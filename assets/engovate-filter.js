@@ -40,7 +40,7 @@
   }
 
   prefixes.forEach(function (prefix) {
-    var form = document.querySelector("form." + prefix + "_filter_form") || document.querySelector('form');
+    var form = document.getElementById(prefix + "_filter_form") || document.querySelector("form." + prefix + "_filter_form") || document.querySelector('form');
     var searchInput = document.querySelector('input[placeholder="Search terms..."]');
     var typeSelect = document.querySelector('select[name="section_type[]"]');
     var current = "all";
